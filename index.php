@@ -1,15 +1,9 @@
 <?php
-session_start();
+include __DIR__ . '/app/view/header.php';
 
-if (isset($_GET['page'])){
-    $page = $_GET['page'];
-    if (stripos($page, "user") !== false){
-        include_once("view/user.php");
-    }elseif ($page=="deconnexion"){
-        include_once("view/deconnexion.php");
-    } else {
-        include_once("view/layout/header.php");
-        include_once("controller/route.php");
-        include_once("view/layout/footer.php");
-    }
-}
+define('BASE_PATH', realpath(__DIR__));
+
+require BASE_PATH . '/core/router.php';
+
+Router::route();
+?>
