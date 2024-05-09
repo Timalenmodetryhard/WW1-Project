@@ -1,192 +1,269 @@
-/* Reset CSS */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styles */
-body {
-  background-image: url(../img/background/darkgreen.png);
-  font-family: Arial, sans-serif;
-}
-
-/* Header styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-header img {
-  height: 50px;
-}
-
-/* Slideshow styles */
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.mySlides {
-  display: none;
-  width: 100%;
-}
-
-.mySlides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* Navigation styles */
-nav {
-  background-color: #444;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style: none;
-  text-align: center;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #333;
-}
-
-nav ul li {
-  display: inline-block;
-  position: relative;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-}
-
-nav ul ul li {
-  display: block;
-}
-
-/* Main content styles */
-.maincontainer {
-  padding: 20px;
-}
-
-.container {
-  position: relative;
-}
-
-.container img {
-  width: 100%;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
-
-/* Article styles */
-article {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-article div {
-  flex-basis: 45%;
-  margin-bottom: 20px;
-}
-
-article div img {
-  width: 100%;
-}
-
-/* Footer styles */
-footer {
-  padding: 20px;
-  color: #fff;
-  background-color: #444;
-}
-
-footer p {
-  margin-bottom: 10px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.social-links a {
-  margin: 0 10px;
-}
-
-.opening-hours {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.opening-hours iframe {
-  margin-right: 20px;
-}
-
-.hours ul {
-  list-style: none;
-}
-
-.copy {
-  text-align: center;
-  background-color: #333;
-}
-
-.copy p {
-  padding: 10px;
-}
-
-.copy img {
-  width: 40px;
-  margin: 0 5px;
-}
-
-/* Nouvelles modifications */
-
-/* Styles pour les div contenant les images du footer */
-footer .social-links,
-footer .opening-hours {
-  flex-basis: 45%;
-}
-
-footer .social-links img {
-  width: 30px; /* Taille réduite pour les icônes des réseaux sociaux */
-}
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+  }
+  
+  body {
+  background-image:url(../img/background/darkgreen.png);
+  font-family:Arial,sans-serif
+  }
+  
+  header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px
+  }
+  
+  header img {
+  height:50px
+  }
+  
+  .slideshow-container {
+  position:relative;
+  width:100%;
+  height:400px;
+  overflow:hidden
+  }
+  
+  .mySlides {
+  display:none;
+  width:100%
+  }
+  
+  .mySlides img {
+  width:100%;
+  height:100%;
+  object-fit:cover
+  }
+  
+  .dot {
+  height:15px;
+  width:15px;
+  margin:0 2px;
+  background-color:#bbb;
+  border-radius:50%;
+  display:inline-block;
+  transition:background-color .6s ease
+  }
+  
+  nav {
+  background-color:#444;
+  padding:10px 0
+  }
+  
+  nav ul {
+  list-style:none;
+  text-align:center
+  }
+  
+  nav ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background-color:#333
+  }
+  
+  nav ul li {
+  display:inline-block;
+  position:relative
+  }
+  
+  nav ul li:hover ul {
+  display:block
+  }
+  
+  nav ul a {
+  display:block;
+  padding:10px 20px;
+  text-decoration:none;
+  color:#fff
+  }
+  
+  nav ul ul li {
+  display:block
+  }
+  
+  .maincontainer {
+  padding:20px
+  }
+  
+  .container {
+  position:relative
+  }
+  
+  .container img {
+  width:100%
+  }
+  
+  .centered {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff
+  }
+  
+  article {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around
+  }
+  
+  article div {
+  flex-basis:45%;
+  margin-bottom:20px
+  }
+  
+  article div img {
+  width:100%
+  }
+  
+  .poppy {
+  background-color:#e6e6fa;
+  border:solid 1px #000;
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  display:inline-block;
+  overflow:hidden
+  }
+  
+  .event1 img,.event2 img,.event3 img {
+  width:100%;
+  height:auto
+  }
+  
+  .poppy:hover::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000c;
+  z-index:1
+  }
+  
+  .cornFlower:hover::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000c;
+  z-index:1
+  }
+  
+  .poppy:hover::after {
+  content:"The Poppy: A Symbol of Remembrance in England Amidst the verdant fields of England, the poppy has emerged as a poignant symbol of remembrance and honor, especially in the aftermath of World War I. The genesis of this association can be traced back to the haunting poem "In Flanders Fields" by Lieutenant Colonel John McCrae, where he poignantly described the poppies blooming amidst the graves of fallen soldiers. Inspired by McCrae's words, the poppy became a powerful emblem of sacrifice and hope for the British people. In 1921, the newly formed Royal British Legion adopted the poppy as a symbol of remembrance, launching an annual Poppy Appeal to raise funds for veterans and their families. Each November, leading up to Remembrance Day, poppies bloom across England, adorning lapels and memorials as a tangible tribute to those who made the ultimate sacrifice. The simple yet profound beauty of the poppy serves as a timeless reminder of the enduring legacy of courage and resilience.";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size:20px;
+  z-index:2
+  }
+  
+  .cornFlower:hover::after {
+  content:"The Poppy: A Symbol of Remembrance in England Amidst the verdant fields of England, the poppy has emergedThe Cornflower: A Symbol of Remembrance in France In the heart of the French countryside, the delicate cornflower holds a special place in the collective memory of the nation, particularly as a symbol of remembrance and solidarity following the devastation of World War I. Known as the "Bleuet de France," or the blue cornflower, its association with remembrance traces back to the aftermath of the Great War. Amidst the ravaged landscapes of France, the cornflower emerged as a symbol of hope and renewal, its vibrant blue petals representing the resilience of the human spirit in the face of adversity. Inspired by this symbolism, the French government established the "Bleuet de France" as a national emblem of remembrance in 1920. Today, the cornflower continues to be revered as a powerful symbol of remembrance in France, with the "Bleuet de France" worn proudly by citizens during memorial ceremonies and fundraising campaigns to support veterans and victims of war. Its enduring presence serves as a poignant reminder of the sacrifices made by generations past and the importance of honoring their memory.";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size:20px;
+  z-index:2
+  }
+  
+  .cornFlower {
+  position:relative;
+  display:inline-block;
+  background-color:red;
+  border:solid 1px #000;
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden
+  }
+  
+  .poppy::before,.cornFlower::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background-color:#000c;
+  transition:left .3s;
+  z-index:1
+  }
+  
+ 
+  .cornFlower img,.poppy img {
+  width:50%;
+  height:auto
+  }
+  
+  footer {
+  padding:20px;
+  color:#fff;
+  background-color:#444
+  }
+  
+  footer p {
+  margin-bottom:10px
+  }
+  
+  .social-links {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:10px
+  }
+  
+  .social-links a {
+  margin:0 10px
+  }
+  
+  .opening-hours {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:10px
+  }
+  
+  .opening-hours iframe {
+  margin-right:20px
+  }
+  
+  .hours ul {
+  list-style:none
+  }
+  
+  .copy {
+  text-align:center;
+  background-color:#333
+  }
+  
+  .copy p {
+  padding:10px
+  }
+  
+  .copy img {
+  width:40px;
+  margin:0 5px
+  }
+  
+  footer .social-links,footer .opening-hours {
+  flex-basis:45%
+  }
+  
+  footer .social-links img {
+  width:30px
+  }
