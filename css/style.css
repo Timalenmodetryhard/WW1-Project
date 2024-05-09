@@ -1,79 +1,192 @@
-*{
+/* Reset CSS */
+* {
   margin: 0;
   padding: 0;
-  min-height: 40px;
+  box-sizing: border-box;
 }
 
+/* Body styles */
 body {
-  background-color: rgb(199, 199, 199);
-  display: flex;
-  flex-wrap: wrap;
+  background-image: url(../img/background/darkgreen.png);
+  font-family: Arial, sans-serif;
 }
+
+/* Header styles */
 header {
-  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header img {
+  height: 50px;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
   width: 100%;
 }
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Navigation styles */
 nav {
-  background-color: rgb(255, 196, 0);
+  background-color: #444;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+/* Main content styles */
+.maincontainer {
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+}
+
+.container img {
   width: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/* Article styles */
+article {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-main{
-  display: flex;
-  flex-wrap: wrap;
+
+article div {
+  flex-basis: 45%;
+  margin-bottom: 20px;
+}
+
+article div img {
   width: 100%;
 }
-section {
-  width: 100%;
+
+/* Footer styles */
+footer {
+  padding: 20px;
+  color: #fff;
+  background-color: #444;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.social-links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.sectionup{
-  background-color: rgb(148, 103, 45);
+
+.social-links a {
+  margin: 0 10px;
 }
-.sectiondown{
-  background-color: gray;
-}
-article{
-  background-color: coral;
-  width: 40%;
-  margin: 1%;
-  height: 100px;
-}
-.articlemus{
-  width: 60%;
-}
-.articleimg{
-  width: 30%;
-}
-footer{
-  width: 100%;
+
+.opening-hours {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
-#footerup{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+
+.opening-hours iframe {
+  margin-right: 20px;
 }
-div{
-  background-color: rgb(235, 213, 255);
+
+.hours ul {
+  list-style: none;
 }
-.divfoot{
-  width: 30%;
-  margin: 1%;
+
+.copy {
+  text-align: center;
+  background-color: #333;
 }
-#divcontact{
-  background-color: aliceblue;
+
+.copy p {
+  padding: 10px;
 }
-#divsocial{
-  background-color: rgb(98, 114, 41);
+
+.copy img {
+  width: 40px;
+  margin: 0 5px;
 }
-#footerdown{
-  background-color: rgb(226, 72, 72);
+
+/* Nouvelles modifications */
+
+/* Styles pour les div contenant les images du footer */
+footer .social-links,
+footer .opening-hours {
+  flex-basis: 45%;
+}
+
+footer .social-links img {
+  width: 30px; /* Taille réduite pour les icônes des réseaux sociaux */
 }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WW1 Remembrance Center</title>
   <link rel="stylesheet" href="/css/styletest.css">
-  <link rel="icon" href="/images/logo/favicon.png">
+  <link rel="icon" href="/img/logo/favicon.png">
   <meta name="keyword" content="portsmouth,ww1,world,war,one,testimony,history,remembrance ">
   <meta name="author" content="WW1 Remembrance Centre">
 </head>
@@ -14,19 +14,19 @@
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img src="/images/caroussel/slideshow1.jpg" style="width:100% ;height:400px">
+        <img src="/img/caroussel/slideshow1.jpg" style="width:100% ;height:400px">
         <div class="text"></div>
       </div>
       
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img src="/images/caroussel/slideshow2.jpg" style="width:100%;height:400px">
+        <img src="/img/caroussel/slideshow2.jpg" style="width:100%;height:400px">
         <div class="text"></div>
       </div>
       
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img src="/images/caroussel/slideshow3.jpg" style="width:100%;height:400px">
+        <img src="/img/caroussel/slideshow3.jpg" style="width:100%;height:400px">
         <div class="text"></div>
       </div>
       
