@@ -1,118 +1,79 @@
-* {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  min-height: 40px;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #c7c7c7;
+  background-color: rgb(199, 199, 199);
+  display: flex;
+  flex-wrap: wrap;
 }
-
 header {
   background-color: aqua;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav {
-  background-color: #ffc400;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul a {
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-}
-
-nav ul a:hover {
-  background-color: #ffea00;
-  border-bottom: solid 1px red;
-}
-
-nav ul ol {
-  list-style: none;
-  display: none;
-  z-index: 1000;
-  padding: 5px;
-  margin: 0;
   width: 100%;
 }
-
-nav ul:hover ol {
-  display: block;
-}
-
-
-main {
+nav {
+  background-color: rgb(255, 196, 0);
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 20px;
 }
-
+main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 20px;
 }
-
-.sectionup {
-  background-color: #94672d;
+.sectionup{
+  background-color: rgb(148, 103, 45);
 }
-
-.sectiondown {
-  background-color: #808080;
+.sectiondown{
+  background-color: gray;
 }
-
-article {
+article{
   background-color: coral;
-  width: 45%;
+  width: 40%;
   margin: 1%;
-  height: 120px;
+  height: 100px;
 }
-
-.articlemus {
+.articlemus{
   width: 60%;
 }
-
-.articleimg {
+.articleimg{
   width: 30%;
 }
-
-footer {
-  background-color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  clear: both;
+footer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
-.divfoot {
+#footerup{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+div{
+  background-color: rgb(235, 213, 255);
+}
+.divfoot{
   width: 30%;
   margin: 1%;
-  display: inline-block;
-  background-color: #ebd5ff;
 }
-
-#divcontact {
+#divcontact{
   background-color: aliceblue;
 }
-
-#divsocial {
-  background-color: #627229;
+#divsocial{
+  background-color: rgb(98, 114, 41);
 }
-
-#footerdown {
-  background-color: #e24848;
+#footerdown{
+  background-color: rgb(226, 72, 72);
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WW1 Remembrance Center</title>
+  <link rel="stylesheet" href="styletest.css">
+  <link rel="icon" href="images/logo/favicon.png">
+  <meta name="keyword" content="portsmouth,ww1,world,war,one,testimony,history,remembrance ">
+  <meta name="author" content="WW1 Remembrance Centre">
+</head>
+<body>
+  <header>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="images/caroussel/slideshow1.jpg" style="width:100% ;height:400px">
+        <div class="text"></div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="images/caroussel/slideshow2.jpg" style="width:100%;height:400px">
+        <div class="text"></div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="images/caroussel/slideshow3.jpg" style="width:100%;height:400px">
+        <div class="text"></div>
+      </div>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+      </script>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Visite</a>
+            <ul>
+                <li><a href="#">About the Museum</a>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Booking & Planning</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Practical Information</a>
+            <ul>
+                <li><a href="#">How to Find Us</a>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </li>          
+        <li><a href="#">Testimony</a></li>
+            <ul>
+                <li><a href="#">Battlefield Trips</a>
+            </ul>
+        </li>  
+        <li><a href="#">Help & Volunteer</a>
+            <ul>
+                <li><a href="#">Volunteering</a></li>
+                <li><a href="#">Donation</a></li>
+                <li><a href="#">Our Gift Shop</a></li>
+                <li><a href="#">Artefact Wanted</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+  <main class="maincontainer">
+    <div class="container">
+      <img src="images/caroussel/slideshow1.jpg" alt="Snow" style="width:100%;">
+      <div class="centered">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores explicabo blanditiis, temporibus, nihil suscipit nesciunt tempora dolor, adipisci deserunt animi atque n Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam sapiente similique voluptatem eius consectetur expedita voluptatibus earum animi, labore sit vel providen Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque ipsam debitis eaque eligendi, velit perferendis exercitationem, voluptatem in dicta modi autem ea explicabo labore et consectetur, omnis recusandae rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum aut voluptatem aspernatur nostrum, harum beatae veritatis? Tempore minus, aut voluptate eius at, in obcaecati eveniet sunt animi soluta esse suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius porro omnis rerum suscipit, ab assumenda perspiciatis dolorum. Blanditiis animi corporis, illo, minim Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque id assumenda sint, laudantium aliquam in ut repudiandae suscipit. Ab laboriosam dolores nihil? Minima molestias, repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero dolores ex eius unde voluptates expedita, ab nesciunt aut a autem, vero quia ut,  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, explicabo. Dicta cumque vel tempore omnis quas nisi eligendi deleniti accusamus quo corrupti nam pariatur corporis aspernatur aliquam, veritatis culpa rem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ipsa molestias cumque praesentium non debitis totam error excepturi, exercitationem atque autem qui quod similique tenetur. Incidunt vitae nostrum ab doloribus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos voluptatum repellat consequuntur similique alias accusamus quod, totam odit assumenda. Delectus, ex. Optio voluptas enim dolore animi rem totam aliquam reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ipsum. Facere nisi dolore voluptas? Maxime aut distinctio doloremque, dolore neque unde facilis. Repudiandae exercitationem reiciendis quia omnis quas! Dolore, sed?sit iure. Laborum reiciendis praesentium eveniet. asperiores labore expedita maiores. Explicabo.a tempora iusto recusandae debitis possimus, libero id aliquid!t dolor magni adipisci voluptates enim sed consequatur.umquam praesentium quae. Dolorum itaque temporibus voluptatum facilis a.Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui possimus maxime, amet adipisci sint ipsam tempora ratione illum ab, fugit est quis atque fuga perferendis unde maiores beatae quod! Itaque.</div>
+    </div>
+
+
+  </main>
+  <footer class="social">
+    <ul class="social-links">
+      <li><a href="https://www.facebook.com/facebook/"><i class="fa fa-facebook-square fa-2x fa-fw"></i></a></li>
+      <li><a href="https://twitter.com/Twitter"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+      <li><a href="https://www.youtube.com/"><i class="fa fa-youtube fa-2x fa-fw"></i></a></li>
+    </ul>
+  </footer>
+  <footer class="copy">
+    <p>&copy; 2024 WW1 Remembrance Center</p>
+
+  </footer>
+</body>
+</html>
