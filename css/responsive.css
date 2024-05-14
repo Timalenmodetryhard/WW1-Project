@@ -1,0 +1,15 @@
+@media only screen and (max-width: 800px) {
+    .botom-header,header button {
+      display: none;
+    }
+    
+    img[alt="responsiv logo"] {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+    nav ul li {
+      width: 100%;
+    }
+    
+  }

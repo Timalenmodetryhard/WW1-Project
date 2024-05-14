@@ -1,269 +1,255 @@
+/* Reset des styles par défaut */
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box
-  }
-  
-  body {
-  background-image:url(../img/background/darkgreen.png);
-  font-family:Arial,sans-serif
-  }
-  
-  header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px
-  }
-  
-  header img {
-  height:50px
-  }
-  
-  .slideshow-container {
-  position:relative;
-  width:100%;
-  height:400px;
-  overflow:hidden
-  }
-  
-  .mySlides {
-  display:none;
-  width:100%
-  }
-  
-  .mySlides img {
-  width:100%;
-  height:100%;
-  object-fit:cover
-  }
-  
-  .dot {
-  height:15px;
-  width:15px;
-  margin:0 2px;
-  background-color:#bbb;
-  border-radius:50%;
-  display:inline-block;
-  transition:background-color .6s ease
-  }
-  
-  nav {
-  background-color:#444;
-  padding:10px 0
-  }
-  
-  nav ul {
-  list-style:none;
-  text-align:center
-  }
-  
-  nav ul ul {
-  display:none;
-  position:absolute;
-  top:100%;
-  left:0;
-  background-color:#333
-  }
-  
-  nav ul li {
-  display:inline-block;
-  position:relative
-  }
-  
-  nav ul li:hover ul {
-  display:block
-  }
-  
-  nav ul a {
-  display:block;
-  padding:10px 20px;
-  text-decoration:none;
-  color:#fff
-  }
-  
-  nav ul ul li {
-  display:block
-  }
-  
-  .maincontainer {
-  padding:20px
-  }
-  
-  .container {
-  position:relative
-  }
-  
-  .container img {
-  width:100%
-  }
-  
-  .centered {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  color:#fff
-  }
-  
-  article {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-around
-  }
-  
-  article div {
-  flex-basis:45%;
-  margin-bottom:20px
-  }
-  
-  article div img {
-  width:100%
-  }
-  
-  .poppy {
-  background-color:#e6e6fa;
-  border:solid 1px #000;
-  display:flex;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-  display:inline-block;
-  overflow:hidden
-  }
-  
-  .event1 img,.event2 img,.event3 img {
-  width:100%;
-  height:auto
-  }
-  
-  .poppy:hover::before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:#000c;
-  z-index:1
-  }
-  
-  .cornFlower:hover::before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:#000c;
-  z-index:1
-  }
-  
-  .poppy:hover::after {
-  content:"The Poppy: A Symbol of Remembrance in England Amidst the verdant fields of England, the poppy has emerged as a poignant symbol of remembrance and honor, especially in the aftermath of World War I. The genesis of this association can be traced back to the haunting poem "In Flanders Fields" by Lieutenant Colonel John McCrae, where he poignantly described the poppies blooming amidst the graves of fallen soldiers. Inspired by McCrae's words, the poppy became a powerful emblem of sacrifice and hope for the British people. In 1921, the newly formed Royal British Legion adopted the poppy as a symbol of remembrance, launching an annual Poppy Appeal to raise funds for veterans and their families. Each November, leading up to Remembrance Day, poppies bloom across England, adorning lapels and memorials as a tangible tribute to those who made the ultimate sacrifice. The simple yet profound beauty of the poppy serves as a timeless reminder of the enduring legacy of courage and resilience.";
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  color:#fff;
-  font-size:20px;
-  z-index:2
-  }
-  
-  .cornFlower:hover::after {
-  content:"The Poppy: A Symbol of Remembrance in England Amidst the verdant fields of England, the poppy has emergedThe Cornflower: A Symbol of Remembrance in France In the heart of the French countryside, the delicate cornflower holds a special place in the collective memory of the nation, particularly as a symbol of remembrance and solidarity following the devastation of World War I. Known as the "Bleuet de France," or the blue cornflower, its association with remembrance traces back to the aftermath of the Great War. Amidst the ravaged landscapes of France, the cornflower emerged as a symbol of hope and renewal, its vibrant blue petals representing the resilience of the human spirit in the face of adversity. Inspired by this symbolism, the French government established the "Bleuet de France" as a national emblem of remembrance in 1920. Today, the cornflower continues to be revered as a powerful symbol of remembrance in France, with the "Bleuet de France" worn proudly by citizens during memorial ceremonies and fundraising campaigns to support veterans and victims of war. Its enduring presence serves as a poignant reminder of the sacrifices made by generations past and the importance of honoring their memory.";
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  color:#fff;
-  font-size:20px;
-  z-index:2
-  }
-  
-  .cornFlower {
-  position:relative;
-  display:inline-block;
-  background-color:red;
-  border:solid 1px #000;
-  display:flex;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden
-  }
-  
-  .poppy::before,.cornFlower::before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background-color:#000c;
-  transition:left .3s;
-  z-index:1
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles du corps */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Styles de l'en-tête */
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Styles de la partie supérieure du header */
+.top-header {
+  width: 100%;
+  justify-content: space-between;
+  text-align: center; /* Centrer le texte */
+  display: flex;
+  position: relative; /* Position relative pour les pseudo-éléments */
+}
+
+img[alt="responsiv logo"] {
+  display: none;
+}
+/* Ajout d'une ligne entre les deux parties du header */
+.top-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h1 */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px; /* Hauteur de la ligne */
+  width: calc(100% - 40%); 
+  background-color: white; /* Couleur de la ligne */
+}
+/* Styles du conteneur du sélecteur */
+.select-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles du sélecteur de drapeau */
+#flag-selector {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+/* Styles des options du sélecteur de drapeau */
+#flag-selector option {
+  background-color: black;
+  border: none;
+}
+
+/* Styles de l'image sélectionnée */
+.selected-image {
+  margin-left: 20px;
+}
+
+/* Styles de l'image sélectionnée */
+#selected-image {
+  width: 30px;
+  height: 25px;
+  object-fit: cover;
+}
+
+/* Styles du titre principal */
+h1 {
+  margin: 0;
+  text-align: center; /* Centrer le texte */
+  width: 100%; /* Pour éviter le débordement */
+}
+
+/* Styles du bouton */
+header button {
+  background-color: #A1CD22;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles du bouton au survol */
+header button:hover {
+  background-color: #0056b3;
+}
+
+/* Suppression de la bordure du sélecteur de drapeau lors du changement de l'image sélectionnée */
+#flag-selector:focus {
+  outline: none;
+}
+
+/* Styles de la partie inférieure du header */
+.botom-header {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+}
+
+/* Style pour la navigation principale */
+.menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Style pour les éléments de la liste de navigation principale */
+.menu li {
+  margin: 0 10px;
+  position: relative; /* Positionnement relatif pour les sous-menus */
+}
+
+/* Style pour les liens de la liste de navigation principale */
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+/* Style pour les liens de la liste de navigation principale au survol */
+.menu li a:hover {
+  color: #A1CD22; /* Couleur de fond au survol */
+  border-bottom: solid 2px #A1CD22;
+}
+
+/* Style pour les sous-menus */
+.submenu {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: black; /* Couleur de fond */
+  z-index: 1;
+  left: 0; /* Aligner les sous-menus à gauche */
+  top: 100%; /* Placer les sous-menus en dessous du menu principal */
+}
+
+/* Afficher les sous-menus au survol */
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* Style pour les éléments des sous-menus */
+.submenu li {
+  margin: 0;
+}
+
+/* Style pour les liens des sous-menus */
+.submenu li a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Style pour les liens des sous-menus au survol */
+.submenu li a:hover {
+  color: #A1CD22;
+  border-bottom: solid 1px #A1CD22;
+}
+/* Styles de l'article */
+/* Styles de l'article */
+article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #008948;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 12em;
+}
+
+/* Styles pour le texte */
+.text {
+  width: 50%; /* Prend la moitié de la largeur de l'article */
+  margin-left: 15%;
+}
+
+.text h3 {
+  text-align: center; /* Centrer le titre */
+  margin-bottom: 10px; /* Ajout d'un espace en bas du titre */
+}
+
+/* Styles pour le bouton */
+.link {
+  text-align: center;
+  width: 50%; /* Prend la moitié de la largeur de l'article */
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+.link button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em; 
+  transition: background-color 0.3s; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre */
  
-  .cornFlower img,.poppy img {
-  width:50%;
-  height:auto
-  }
-  
-  footer {
-  padding:20px;
-  color:#fff;
-  background-color:#444
-  }
-  
-  footer p {
-  margin-bottom:10px
-  }
-  
-  .social-links {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:10px
-  }
-  
-  .social-links a {
-  margin:0 10px
-  }
-  
-  .opening-hours {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:10px
-  }
-  
-  .opening-hours iframe {
-  margin-right:20px
-  }
-  
-  .hours ul {
-  list-style:none
-  }
-  
-  .copy {
-  text-align:center;
-  background-color:#333
-  }
-  
-  .copy p {
-  padding:10px
-  }
-  
-  .copy img {
-  width:40px;
-  margin:0 5px
-  }
-  
-  footer .social-links,footer .opening-hours {
-  flex-basis:45%
-  }
-  
-  footer .social-links img {
-  width:30px
-  }
+}
+
+.link button:hover {
+  background-color: #0056b3;
+}
+#slider-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Cache le menu par défaut */
+  width: 300px;
+  height: 100%;
+  background-color: black;
+  padding-top: 50px;
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+#slider-menu.active {
+  left: 0; /* Affiche le menu lorsque la classe active est ajoutée */
+}
+
+#slider-menu ul {
+  padding-left: 20px;
+}
+
+#slider-menu ul.menu li {
+  margin-bottom: 20px;
+}
+
+#slider-menu ul.submenu {
+  display: none;
+}
+
+#slider-menu ul.submenu.active {
+  display: block;
+}
