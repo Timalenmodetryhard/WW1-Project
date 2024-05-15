@@ -10,9 +10,21 @@ class BaseController extends Controller
 
     }
 
-    public function contact()
+    public function home()
     {
-        $this->loadView('contact.php');
+        $this->loadView('home.php');
+    }
+    public function booking()
+    {
+        $this->loadView('booking.php');
+    }
+    public function information()
+    {
+        $this->loadView('information.php');
+    }
+    public function testimony()
+    {
+        $this->loadView('testimony.php');
     }
     public function deconnecter()
     {
