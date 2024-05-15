@@ -29,7 +29,6 @@ header {
   display: flex;
   position: relative; /* Position relative pour les pseudo-éléments */
 }
-
 img[alt="responsiv logo"] {
   display: none;
 }
@@ -253,3 +252,5 @@ article {
 #slider-menu ul.submenu.active {
   display: block;
 }
+#schedule-tour-popup-button{border-width: 0; box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset; font-weight: 600; position: relative; transition: 0.3s ease-in-out 0s;background-color: #A1CD22;color: #ffffff;border-radius: 6px;font-size: 18px;line-height: 1.33;-moz-user-select: none;cursor: pointer;display: inline-block;margin-bottom: 0;text-align: center;vertical-align: middle;white-space: nowrap;padding:11px 16px;}
+#schedule-tour-popup-button:hover { background-color: #363636 }

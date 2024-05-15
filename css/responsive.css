@@ -1,8 +1,10 @@
 @media only screen and (max-width: 800px) {
-  .botom-header, header button {
+  .botom-header {
     display: none;
   }
-  
+  #schedule-tour-popup-button{
+    display: none;
+  }
   img[alt="responsiv logo"] {
     display: block;
     width: 20px;

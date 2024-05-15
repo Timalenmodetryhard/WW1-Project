@@ -6,6 +6,7 @@
   <title>WW1 Remembrance Center</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href='css/responsive.css'>
+  <link rel="stylesheet" type="text/css" href="css/booking.css" media="all">
   <link rel="icon" href="img/logo/logo.png">
   <meta name="keyword" content="portsmouth,ww1,world,war,one,testimony,history,remembrance">
   <meta name="author" content="WW1 Remembrance Centre">
@@ -15,13 +16,13 @@
     <div class="top-header">
       <div class="select-wrapper">
         <select id="flag-selector">
-        <option value="img/flags/uk.png">UK</option>
+        <option value="img/flags/uk.png">Uk</option>
         <option value="img/flags/france.png">Fr</option>
         <option value="img/flags/itali.png">It</option>
-        <option value="img/flags/german.png">GR</option>
-        <option value="img/flags/deutchlant.png">Dl</option>
-        <option value="img/flags/spanish.png">SP</option>
-        <option value="img/flags/china.png">CH</option>
+        <option value="img/flags/german.png">Gz</option>
+        <option value="img/flags/deutchlant.png">De</option>
+        <option value="img/flags/spanish.png">Sp</option>
+        <option value="img/flags/china.png">Ch</option>
       </select>
       <div class="selected-image">
         <img id="selected-image" src="img/flags/uk.png" alt="Selected Flag">
@@ -37,7 +38,7 @@
       <h1>WWI Remembrance Center</h1>
     </span>
     <span>
-      <button type="button">Book your visit</button>
+      <button type="button" id="schedule-tour-popup-button">Book your visit</button>
     </span>
     <img src="img/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
@@ -77,17 +78,29 @@
       </ul>      
     </nav>
   </header>
- <!--<article>
+  <div>
+    <div id="schedule-tour-modal" class="schedule-tour-modal">
+    <div class="schedule-tour-modal-content">
+    <div class="schedule-tour-modal-body">
+    <div><div class="row"><div class="col-md-3"></div><div class="col-md-6 center-block"><span class="schedule_popup_close" ></span></div><div class="col-md-3">   </div></div></div>
+    <div class='embed-container' ><iframe id='ifrm' src='https://www.myshowing.com/Corcoran_Jennison_Companies/Harbor_Point_On_The_Bay/scheduletourwidget/a0F0H00000d3lOQUAY/' frameborder='0' style='border:0;' frameborder='0' ></iframe>
+    </div></div></div></div>
+    <script src="script/booking.js"></script>
+
+  </div>
+
+  <article>
     <span class="text">
       <h3>Donation</h3><br>
       <p> Your support and contributions will enable us to meet our goals and improve conditions.<br>Any generous donation will fund our mission. No donations go on any sort of wages. All our staff are volunteers.<br>Any donations go on the care of artifacts and building.</p>
+  
     </span>
     <span class="link">
       <a href="#">
         <button type="button">Donate</button>
       </a>
     </span>
-  </article> -->
+  </article>
   <script type="text/javascript" src="script/burgeur.js"></script>
 </body>
 </html>
