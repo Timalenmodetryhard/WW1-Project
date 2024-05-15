@@ -78,6 +78,6 @@
     text-decoration: none; /* Supprimer la soulignement par défaut */
   }
   section{
-    display: block;
+    display: block  ;
   }
 }

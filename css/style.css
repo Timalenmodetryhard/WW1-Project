@@ -290,7 +290,7 @@ section span:nth-child(even) {
 }
 
 section img {
-  height: 300px;
+  height: 450px;
   width: auto;
   margin-bottom: 2em; /* Réduire l'espacement sous l'image */
   padding: 20px; /* Ajouter un peu de rembourrage */
