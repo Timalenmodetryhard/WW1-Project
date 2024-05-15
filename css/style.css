@@ -252,5 +252,57 @@ article {
 #slider-menu ul.submenu.active {
   display: block;
 }
-#schedule-tour-popup-button{border-width: 0; box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset; font-weight: 600; position: relative; transition: 0.3s ease-in-out 0s;background-color: #A1CD22;color: #ffffff;border-radius: 6px;font-size: 18px;line-height: 1.33;-moz-user-select: none;cursor: pointer;display: inline-block;margin-bottom: 0;text-align: center;vertical-align: middle;white-space: nowrap;padding:11px 16px;}
-#schedule-tour-popup-button:hover { background-color: #363636 }
+#schedule-tour-popup-button{
+  border-width: 0; box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset; font-weight: 600; position: relative; transition: 0.3s ease-in-out 0s;background-color: #A1CD22;color: #ffffff;border-radius: 6px;font-size: 18px;line-height: 1.33;-moz-user-select: none;cursor: pointer;display: inline-block;margin-bottom: 0;text-align: center;vertical-align: middle;white-space: nowrap;padding:11px 16px;}
+#schedule-tour-popup-button:hover {
+   background-color: #363636 }
+  /* Styles de base */
+section {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacement entre les éléments */
+  background-color: #2C2A2D;
+  color: white;
+  align-items: center; /* Centrer horizontalement les éléments */
+}
+
+h3 {
+  text-align: center; /* Centrer le texte du h3 */
+  width: 100%; /* Ajuster la largeur du h3 */
+  margin-top: 20px; /* Ajouter de l'espace au-dessus du h3 */
+  margin-bottom: 20px; /* Ajouter de l'espace en dessous du h3 */
+}
+
+section span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer horizontalement le contenu */
+}
+
+section span:nth-child(odd) {
+  justify-content: flex-end; /* Aligner le texte à droite */
+}
+
+section span:nth-child(even) {
+  justify-content: flex-start; /* Aligner le texte à gauche */
+}
+
+section img {
+  height: 300px;
+  width: auto;
+  margin-bottom: 2em; /* Réduire l'espacement sous l'image */
+  padding: 20px; /* Ajouter un peu de rembourrage */
+  display: block; /* Ajuster l'image pour être centrée */
+  margin-left: auto; /* Ajuster la marge gauche pour centrer l'image */
+  margin-right: auto; /* Ajuster la marge droite pour centrer l'image */
+}
+
+section p {
+  text-align: justify;
+  padding: 20px; /* Ajuster les marges intérieures */
+  gap: 2px;
+  max-width: 80%; /* Limiter la largeur du texte pour une meilleure lisibilité */
+  margin: 0 auto; /* Centrer le texte horizontalement */
+}
