@@ -1,0 +1,83 @@
+/*.champ{
+    width: 50%;
+}*/
+h1{
+    font-family: 'Andada Pro';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+}
+
+
+.museum-presentation {
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+.museum-presentation img{
+    padding-top: 10%;
+    width: 513px;
+    height: 520px;
+}
+.museum-presentation h2{
+    font-size: 36px;
+    text-align: center;
+}
+.museum-presentation p{
+    font-size: 20px;
+}
+.museum-presentation article{
+    padding-left: 8%;
+    text-align: middle;
+    padding: horizontal;
+
+}
+
+
+
+.corn-flowers {
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+.corn-flowers img{
+    padding-top: 10%;
+    width: 520px;
+    height: 567px;
+    justify-content: right;
+    /*padding-left: 1%;*/
+}
+.corn-flowers h2{
+    font-size: 45px;
+    text-align: center;
+}
+.corn-flowers p{
+    font-size: 20px;
+}
+.corn-flowers article{
+   /* width: 300px;*/
+   padding-left: 8%;
+}
+
+
+.poppy {
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+.poppy img{
+    padding-top: 10%;
+    width: 523px;
+    height: 594px;
+}
+.poppy h2{
+    font-size: 45px;
+    text-align: center;
+}
+.poppy p{
+    font-size: 20px;
+}
+.poppy article{
+    padding-left: 8%;
+}
