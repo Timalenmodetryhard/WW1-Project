@@ -1,0 +1,80 @@
+*{
+    background-color: #e3e0e0;
+}
+h1{
+    font-family: 'Andada Pro';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.testimonyone {
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+.testimonyone img{
+    padding-top: 10%;
+    width: 520px;
+    height: 520px;
+}
+.testimonyone h2{
+    font-size: 64px;
+    text-align: center;
+}
+.testimonyone p{
+    font-size: 20px;
+}
+.testimonyone article{
+    padding-left: 8%;
+
+}
+
+
+
+.testimonytwo {
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+.testimonytwo img{
+    padding-top: 10%;
+    width: 569px;
+    height: 573px;
+    justify-content: right;
+    /*padding-left: 1%;*/
+}
+.testimonytwo h2{
+    font-size: 64px;
+    text-align: center;
+}
+.testimonytwo p{
+    font-size: 20px;
+}
+.testimonytwo article{
+   /* width: 300px;*/
+   padding-left: 8%;
+}
+
+
+.testimonythree {
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+.testimonythree img{
+    padding-top: 10%;
+    width: 581px;
+    height: 573px;
+}
+.testimonythree h2{
+    font-size: 64px;
+    text-align: center;
+}
+.testimonythree p{
+    font-size: 20px;
+}
+.testimonythree article{
+    padding-left: 8%;
+}
