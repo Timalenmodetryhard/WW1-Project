@@ -173,7 +173,7 @@ header button:hover {
 }
 /* Styles de l'article */
 /* Styles de l'article */
-article {
+.donnation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -257,7 +257,7 @@ article {
 #schedule-tour-popup-button:hover {
    background-color: #363636 }
   /* Styles de base */
-section {
+.events {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -273,23 +273,22 @@ h3 {
   margin-top: 20px; /* Ajouter de l'espace au-dessus du h3 */
   margin-bottom: 20px; /* Ajouter de l'espace en dessous du h3 */
 }
-
-section span {
+.events span {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center; /* Centrer horizontalement le contenu */
 }
 
-section span:nth-child(odd) {
+.events span:nth-child(odd) {
   justify-content: flex-end; /* Aligner le texte à droite */
 }
 
-section span:nth-child(even) {
+.events span:nth-child(even) {
   justify-content: flex-start; /* Aligner le texte à gauche */
 }
 
-section img {
+.events img {
   height: 450px;
   width: auto;
   margin-bottom: 2em; /* Réduire l'espacement sous l'image */
@@ -299,10 +298,86 @@ section img {
   margin-right: auto; /* Ajuster la marge droite pour centrer l'image */
 }
 
-section p {
+.events p {
   text-align: justify;
   padding: 20px; /* Ajuster les marges intérieures */
   gap: 2px;
   max-width: 80%; /* Limiter la largeur du texte pour une meilleure lisibilité */
   margin: 0 auto; /* Centrer le texte horizontalement */
 }
+.help-information {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.help-information h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.help-information img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.differente-roles {
+  font-weight: bolder;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.differente-roles h3 {
+  margin-bottom: 10px;
+}
+
+.differente-roles p,
+.differente-roles ol {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.helps-explanation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.helps-explanation section {
+  text-align: center;
+  padding: 1em 7em;
+  max-width: 700px;
+  width: 100%;
+}
+
+.helps-explanation section p {
+  text-align: justify;
+  margin-top: 1em;
+}
+
+.Natwest {
+  text-align: jus;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.Natwest h4 {
+  margin-bottom: 1em;
+}
+
+.Natwest strong {
+  display: inline;
+}
+
+.Natwest p {
+  margin-top: 1em;
+  text-align: justify;
+}
+
+
+
+
