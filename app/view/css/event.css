@@ -1,19 +1,35 @@
 .events {
+<<<<<<< Updated upstream
+=======
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+>>>>>>> Stashed changes
     padding: 4% 14%;
     background-color: #2C2A2D;
     color: white
 }
 
+<<<<<<< Updated upstream
 .title-page{
     font-family: 'Arial';
     font-weight: bold;
     display: flex;
     justify-content: center;
     font-size: 50px;
+=======
+.title-page {
+    font-family: 'Andada Pro';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 3.75rem; /* équivalent à 60px */
+>>>>>>> Stashed changes
     margin: 0 3%;
 }
 
 .event{
+<<<<<<< Updated upstream
     display: grid;
     align-items: center;
     width: 100%;
@@ -39,6 +55,34 @@
     padding-right: var(--column-unit);
     display: flex;
     flex-direction: column;
+=======
+    display: flex;
+    align-items: stretch; /* Ajustement de la hauteur */
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.event-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event img {
+    max-width: 100%;
+    height: auto;
+}
+
+.event-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 1rem; /* équivalent à 16px */
+>>>>>>> Stashed changes
 }
 
 .event-right>.article-text{
@@ -57,4 +101,29 @@
 .event-left>.article-img {
     grid-column: 2 / 3;
     padding-left: 4%;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+/* Styles pour petits écrans (téléphones) */
+@media (max-width: 1169px) {
+    .title-page {
+        font-size: 2.5rem; /* équivalent à 40px */
+        margin: 0 2%;
+    }
+
+    .event {
+        flex-direction: column; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .event-img, .event-text {
+        width: 100%;
+    }
+
+    .event-text {
+        margin-top: 1rem; /* équivalent à 16px */
+    }
+}
+>>>>>>> Stashed changes

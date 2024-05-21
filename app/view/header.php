@@ -42,9 +42,13 @@
       <div class="header-title">
         <h1>WWI REMEMBRANCE CENTER</h1>
       </div>
+<<<<<<< Updated upstream
       <span>
         <button type="button" id="schedule-tour-popup-button">Book your visit</button>
       </span>
+=======
+      <button type="button" id="schedule-tour-popup-button">Book your visit</button> 
+>>>>>>> Stashed changes
       <img src="img/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
     <nav class="botom-header"> 

@@ -14,9 +14,15 @@
         <div class="follow-us">
           <h2>Follow Us</h2>
           <ul class="reseaux-sociaux">
+<<<<<<< Updated upstream
               <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><i class="fab fa-facebook-f"></i><img src="img/logo/facebook.png" alt="facebook" style="width:74px;height:74px;"></a></li>
               <li><a href="https://twitter.com/WW1Centre"><i class="fab fa-twitter"></i><img src="img/logo/x.png" alt="twitter" style="width:65px;height:65px;"></a></li>
               <li><a href="https://www.youtube.com/@WW1remcen"><i class="fab fa-youtube"></i><img src="img/logo/ytb.png" alt="youtube" style="width:74px;height:74px;"></a></li>
+=======
+              <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><i class="fab fa-facebook-f"></i><img src="img/logo/facebook.png" alt="facebook"></a></li>
+              <li><a href="https://twitter.com/WW1Centre"><i class="fab fa-twitter"></i><img src="img/logo/x.png" alt="twitter"></a></li>
+              <li><a href="https://www.youtube.com/@WW1remcen"><i class="fab fa-youtube"></i><img src="img/logo/ytb.png" alt="youtube"></a></li>
+>>>>>>> Stashed changes
           </ul>
         </div>
       </div>
