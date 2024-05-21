@@ -1,0 +1,90 @@
+/* Styles généraux (pour tous les écrans) */
+.history {
+    display: flex;
+    flex-direction: column;
+    padding: 4% 6%;
+    gap: 3rem;
+}
+
+.title-page {
+    font-family: 'Andada Pro';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 3.75rem; /* équivalent à 60px */
+    margin: 0 3%;
+}
+
+.article-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-img-ratio {
+    width: 100%;
+    display: block;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 1rem; /* équivalent à 16px */
+}
+
+.museum-presentation, .corn-flowers, .poppy {
+    display: flex;
+    align-items: stretch; /* Ajustement de la hauteur */
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.corn-flowers h2, .poppy h2 {
+    font-size: 3rem; /* équivalent à 30px */
+    text-align: center;
+}
+
+.museum-presentation h2 {
+    font-size: 1.875rem; /* équivalent à 30px */
+    text-align: center;
+}
+
+.museum-presentation p, .corn-flowers p, .poppy p {
+    font-size: 1.25rem; /* équivalent à 20px */
+}
+
+/* Styles pour petits écrans (téléphones) */
+@media (max-width: 1169px) {
+    .title-page {
+        font-size: 2.5rem; /* équivalent à 40px */
+        margin: 0 2%;
+    }
+
+    .museum-presentation, .poppy {
+        flex-direction: column; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .corn-flowers {
+        flex-direction: column-reverse; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .article-img, .article-text {
+        width: 100%;
+    }
+
+    .article-text {
+        margin-top: 1rem; /* équivalent à 16px */
+    }
+}
