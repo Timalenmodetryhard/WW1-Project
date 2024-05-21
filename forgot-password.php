@@ -29,41 +29,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $new_password = bin2hex(random_bytes(10));
         $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
 
-        // Envoyer le nouveau mot de passe par e-mail
-        $to = $email;
-        $subject = "Mot de passe sécurisé généré automatiquement";
-        $message = "Votre nouveau mot de passe est : " . $new_password;
-        $headers = "From: your-email@example.com";
+        // Mettre à jour le mot de passe de l'utilisateur dans la base de données
+        $stmt->bind_result($username);
+        $stmt->fetch();
+        $update_sql = "UPDATE users SET password = ? WHERE username = ?";
+        $update_stmt = $conn->prepare($update_sql);
+        $update_stmt->bind_param("ss", $hashed_password, $username);
+        $update_stmt->execute();
+        $update_stmt->close();
+    }
 
-        if (mail($to, $subject, $message, $headers)) {
-            // Mettre à jour le mot de passe de l'utilisateur dans la base de données
-            $stmt->bind_result($username);
-            $stmt->fetch();
-            $update_sql = "UPDATE users SET password = ? WHERE username = ?";
-            $update_stmt = $conn->prepare($update_sql);
-            $update_stmt->bind_param("ss", $hashed_password, $username);
+    // Envoyer un e-mail neutre
+    $to = $email;
+    $subject = "Instructions pour réinitialiser votre mot de passe";
+    $message = "Si votre adresse e-mail est enregistrée dans notre système, vous recevrez un e-mail avec les instructions pour réinitialiser votre mot de passe.";
+    $headers = "From: your-email@example.com";
 
-            if ($update_stmt->execute()) {
-                echo "Mot de passe mis à jour avec succès dans la base de données";
-                // Rediriger vers une page de succès
-                header("Location: success.html");
-                exit();
-            } else {
-                echo "Erreur lors de la mise à jour du mot de passe : " . $conn->error;
-                // Rediriger vers une page d'erreur
-                header("Location: error.html");
-                exit();
-            }
-
-            $update_stmt->close();
-        } else {
-            echo "Erreur lors de l'envoi de l'e-mail";
-            // Rediriger vers une page d'erreur
-            header("Location: error.html");
-            exit();
-        }
+    if (mail($to, $subject, $message, $headers)) {
+        // Rediriger vers une page de succès
+        header("Location: login.html");
+        exit();
     } else {
-        echo "Adresse e-mail non trouvée dans la base de données";
+        echo "Erreur lors de l'envoi de l'e-mail";
         // Rediriger vers une page d'erreur
         header("Location: error.html");
         exit();
