@@ -1,58 +1,121 @@
-.elements{
+/* Styles généraux (pour tous les écrans) */
+.contactus {
+    background-color: #2c2a2d;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+    padding: 3% 12%;
+    color: white;
+}
+
+.title-page {
+    font-family: 'Andada Pro', serif;
+    font-weight: bold;
+    font-size: 3.75rem; /* équivalent à 60px */
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.elements {
+    display: flex;
+    width: 100%;
+    margin-top: 8%;
     color: #ed6807;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem; /* équivalent à 20px */
 }
+
 .elements > form {
     display: flex;
     flex-direction: row;
-    gap:60px;
+    justify-content: space-between;
+    gap: 12%;
+    width: 100%;
 }
-label{
+
+.elements article {
     display: flex;
-    
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%;
 }
-label[for="E-mail"],[for="fname"],[for="text"]{
+
+label {
+    display: flex;
     margin-top: 7%;
 }
-input{
+
+.contactus input, .contactus textarea {
     display: flex;
     background-color: #d9d9d9;
-    width: 310px;
-    height: 40px;
+    width: 100%;
+    border: none;
+    padding: 1%;
+    margin-top: 1%;
+    box-sizing: border-box;
 }
 
-textarea{
-    display: flex;
-    background-color: #d9d9d9;
-    width: 630px;
-    height: 390px;
+.contactus textarea {
+    height: 20rem; /* équivalent à 320px */
 }
 
-
-input[type="submit"]{
+input[type="submit"] {
     background-color: #62762a;
     margin-top: 10%;
+    color: white;
     justify-content: center;
     float: right;
+    padding: 1% 2%;
+    border: none;
+    cursor: pointer;
 }
 
-.map{
+.contactus .map {
     display: block;
-    justify-content: center;
-    width: 1080px;
-    height: 500px;
-    flex-direction: row;
+    width: 100%;
+    height: 50rem; /* équivalent à 480px */
     filter: grayscale(100%);
+    padding: 4% 0;
 }
 
-h2{
+.contactus h2 {
     color: #ed6807;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem; /* équivalent à 20px */
     margin-top: 5%;
     margin-bottom: 2%;
+}
+
+/* Styles pour petits écrans (téléphones) */
+@media (max-width: 1169px) {
+    .title-page {
+        font-size: 2.5rem; /* équivalent à 40px */
+        margin-bottom: 2%;
+    }
+
+    .elements {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .elements > form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .elements article {
+        width: 100%;
+    }
+
+    .contactus textarea {
+        height: 15rem; /* équivalent à 240px */
+    }
+
+    .contactus .map {
+        height: 30rem; /* équivalent à 320px */
+    }
 }

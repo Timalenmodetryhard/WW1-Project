@@ -174,7 +174,7 @@ header button:hover {
   display: none;
   position: absolute;
   background-color: #1C1C1C; /* Couleur de fond */
-  z-index: 1;
+  z-index: 2;
   left: 0; /* Aligner les sous-menus à gauche */
   top: 100%; /* Placer les sous-menus en dessous du menu principal */
 }

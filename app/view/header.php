@@ -16,6 +16,7 @@
         include_once __DIR__ . '\css\helpandvolunteer.css';
         include_once __DIR__ . '\css\testimony.css';
         include_once __DIR__ . '\css\contactus.css';
+        include_once __DIR__ . '\css\praticalinfos.css';
       ?>
     </style>
 </head>
