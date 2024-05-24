@@ -29,4 +29,4 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem totam praesentium, accusamus dignissimos, repellat id minima provident iste ab maxime molestiae reiciendis tempore consequatur voluptas mollitia sed fugit dolor. Quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum alias, cumque voluptate natus, ut tenetur possimus porro pariatur ab fuga, rem rerum libero cum? Delectus eos placeat debitis animi quis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, repudiandae sed, a voluptatem laborum dolore eum ad commodi tempore necessitatibus autem iste omnis distinctio sint laboriosam cumque accusamus voluptatum facilis!</p>
         </article>
     </div>
-    </section>
+</section>

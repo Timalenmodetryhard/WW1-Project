@@ -6,7 +6,7 @@ const routes = array(
     '/'             => array('BaseController', 'home'),
     '/information'             => array('BaseController', 'information'),
     '/testimony'             => array('BaseController', 'testimony'),
-    '/visit'             => array('BaseController', 'booking'),
+    '/booking'             => array('BaseController', 'booking'),
     '/helpandvolunteer'             => array('BaseController', 'helpandvolunteer'),
     '/praticalinfos'             => array('BaseController', 'praticalinfos'),
 );

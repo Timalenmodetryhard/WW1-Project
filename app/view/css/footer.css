@@ -9,6 +9,7 @@ footer {
   justify-content: space-evenly;
   background-color: #1C1C1C;
   padding-top: 2.5%;
+  padding: 0 5%;
 }
 
 #footerup {
@@ -33,12 +34,13 @@ footer {
 .footerup {
   text-align: center;
   padding: 2rem;
-  height: calc(3em * 6 + 4.17rem);
+  height: fit-content;
   background-color: #1C1C1C;
   color: #ED6807;
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-bottom: 0.125rem solid white;
 }
 
 .footerup > iframe {
@@ -46,16 +48,11 @@ footer {
 }
 
 .map {
-  margin-right: 1.67%;
-  margin-bottom: 1.74%;
-  padding: 0.67%;
+  padding: 3%;
   width: 25%;
   flex-grow: 1;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
+  border: none;
+  border-right: .125rem solid white;
 }
 
 .infsocial {
@@ -64,31 +61,14 @@ footer {
   flex-grow: 1;
 }
 
-.infsocial::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0.08%; /* Augmente la largeur de la ligne à 2 pixels */
-  height: calc(3em * 5.5 + 4.17rem); /* Réduit la hauteur de la ligne de 40 pixels */
-  background-color: #ffffff;
-}
-
 .informations {
   text-align: left;
   margin: 1.74% auto;
-  width: 100%;
+  width: 50%;
   flex: 0 0 auto;
   padding: 1.74%;
   margin-left: 5.56%;
-}
-
-.informations::after {
-  content: "";
-  display: block;
-  width: 44.44%;
-  height: 0.23rem;
-  background-color: #ccc;
-  margin-top: 2.5%;
+  border-bottom: 0.125rem solid white;
 }
 
 .informations h1 {
@@ -170,17 +150,6 @@ footer {
   height: calc((3em * 6 + 4.17rem) / (431 / 151));
 }
 
-.footerup::after {
-  content: "";
-  display: block;
-  position: absolute;
-  margin-top: 25.98%;
-  left: 4em;
-  width: 90%; /* Augmente la largeur de la ligne à 2 pixels */
-  height: 0.23rem; /* Réduit la hauteur de la ligne de 40 pixels */
-  background-color: #ffffff;
-}
-
 .logo {
   display: inline-block;
   padding: 0.67%;
@@ -205,37 +174,25 @@ p {
 
 @media (max-width: 1169px) {
   .footerup {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .map {
     width: 60%;
+    padding-top: 2.5rem;
+    border-right: none;
+    border-top: 0.125rem solid white;
   }
 
   .infsocial {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .informations::after {
-    content: "";
-    display: block;
-    width: 0.23rem;
-    height: 44.44%;
-    background-color: #ccc;
-  }
-
-  .infsocial::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 90%;
-    height: 0.08%;
-    background-color: #ffffff;
+    padding-bottom: 1rem;
   }
 
   .informations {
     width: fit-content;
+    border: none;
   }
 
   .follow-us {

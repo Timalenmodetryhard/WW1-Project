@@ -17,6 +17,7 @@
         include_once __DIR__ . '\css\testimony.css';
         include_once __DIR__ . '\css\contactus.css';
         include_once __DIR__ . '\css\praticalinfos.css';
+        include_once __DIR__ . '\css\booking.css';
       ?>
     </style>
 </head>
@@ -44,45 +45,43 @@
         });
       </script>
       <div class="header-title">
-        <h1>WWI REMEMBRANCE CENTER</h1>
+        <h1>WWI REMEMBRANCE CENTRE</h1>
       </div>
-      <button type="button" id="schedule-tour-popup-button">Book your visit</button> 
+      <a id="schedule-tour-popup-button" href="/booking">Book your visit</a> 
       <img src="img/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
         <li><a href="/">Home</a></li>
-        <li>
-          <a href="#">Visit</a>
+        <li class="menu-option">
+          <a>Visit</a>
           <ul class="submenu">
             <li><a href="#">Events</a></li>
-            <li><a href="#">Booking Planning</a></li>
+            <li><a href="/booking">Booking Planning</a></li>
           </ul>
         </li>
-        <li>
-          <a href="/praticalinfos">Practical Information</a>
+        <li class="menu-option">
+          <a>Practical Information</a>
           <ul class="submenu">
-            <li><a href="#">How to find Us</a></li>
-            <li><a href="#">About the museum</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/praticalinfos">Contact</a></li>
           </ul>
         </li>
         <li>
           <a href="/testimony">Testimony</a>
         </li>
-        <li>
-          <a href="/helpandvolunteer">Help & Volunteer</a>
-          <ol class="submenu">
-            <li><a href="#">Voluntary</a></li>
-            <li><a href="#">Donation</a></li>
-            <li><a href="#">Our gift shop</a></li>
-            <li><a href="#">Artifact wanted</a></li>
-          </ol>
+        <li class="menu-option">
+          <a>Help & Volunteer</a>
+          <ul class="submenu">
+            <li><a href="/helpandvolunteer">Volunteer Guideline</a></li>
+            <li><a href="#">Our Gift Shop</a></li>
+            <li><a href="#">Artifact Wanted</a></li>
+          </ul>
         </li>
       </ul>      
     </nav>
 
     <script src="script/burgeur.js"></script>
-
+    <script src="script/header_scroll.js"></script>
   </div>
   </header>
+  <div class="fake-header"></div>

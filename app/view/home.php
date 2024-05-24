@@ -51,7 +51,7 @@
         </article>
     </div>
 </section>
-<?php 
-include_once __DIR__ . "/layout/event.php";
-include_once __DIR__ . "/layout/donation.php";
+<?php
+    include_once __DIR__ . "/layout/event.php";
+    include_once __DIR__ . "/layout/donation.php";
 ?>

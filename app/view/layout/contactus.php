@@ -18,7 +18,7 @@
                     <input type="text" id="fname" name="fname">
                 </div>
                 <div>
-                    <label for="text">Adress :</label>
+                    <label for="text">Address :</label>
                     <input type="text" id="maps" name="maps">
                 </div>
             </article>
