@@ -8,4 +8,5 @@ const routes = array(
     '/testimony'             => array('BaseController', 'testimony'),
     '/visit'             => array('BaseController', 'booking'),
     '/helpandvolunteer'             => array('BaseController', 'helpandvolunteer'),
+    '/praticalinfos'             => array('BaseController', 'praticalinfos'),
 );

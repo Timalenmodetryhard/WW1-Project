@@ -17,9 +17,6 @@
         </article>
     </div>
     <div class="event2 event event-left">
-        <article class="event-img">
-            <img src="img/event/Soldier.png" alt="WW1 soldier in trensh">
-        </article>
         <article class="event-text">
             <p>
             Opening the doors of the WW1 Memorial for a special costume event was a vibrant celebration
@@ -29,6 +26,9 @@
                 War's enduring legacy.<br> It was a memorable evening, where past and present intertwined, bridging
                  generations through shared remembrance and tribute.
             </p>
+        </article>
+        <article class="event-img">
+            <img src="img/event/Soldier.png" alt="WW1 soldier in trensh">
         </article>
     </div>
     <div class="event3 event event-right">

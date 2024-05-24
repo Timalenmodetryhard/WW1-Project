@@ -26,6 +26,14 @@ class BaseController extends Controller
     {
         $this->loadView('testimony.php');
     }
+    public function helpandvolunteer()
+    {
+        $this->loadView('helpandvolunteer.php');
+    }
+    public function praticalinfos()
+    {
+        $this->loadView('praticalinfos.php');
+    }
     public function deconnecter()
     {
         $this->loadView('deconnexion.php');

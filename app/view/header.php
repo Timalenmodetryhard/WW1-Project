@@ -13,6 +13,9 @@
         include_once __DIR__ . '\css\home.css';
         include_once __DIR__ . '\css\event.css';
         include_once __DIR__ . '\css\donation.css';
+        include_once __DIR__ . '\css\helpandvolunteer.css';
+        include_once __DIR__ . '\css\testimony.css';
+        include_once __DIR__ . '\css\contactus.css';
       ?>
     </style>
 </head>
@@ -47,7 +50,7 @@
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li>
           <a href="#">Visit</a>
           <ul class="submenu">
@@ -56,7 +59,7 @@
           </ul>
         </li>
         <li>
-          <a href="#">Practical Information</a>
+          <a href="/praticalinfos">Practical Information</a>
           <ul class="submenu">
             <li><a href="#">How to find Us</a></li>
             <li><a href="#">About the museum</a></li>
@@ -64,10 +67,10 @@
           </ul>
         </li>
         <li>
-          <a href="#">Testimony</a>
+          <a href="/testimony">Testimony</a>
         </li>
         <li>
-          <a href="#">Help & Volunteer</a>
+          <a href="/helpandvolunteer">Help & Volunteer</a>
           <ol class="submenu">
             <li><a href="#">Voluntary</a></li>
             <li><a href="#">Donation</a></li>
@@ -77,5 +80,8 @@
         </li>
       </ul>      
     </nav>
+
+    <script src="script/burgeur.js"></script>
+
+  </div>
   </header>
-  <body>

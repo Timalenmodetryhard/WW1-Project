@@ -1,3 +1,22 @@
+<div class="carousel">
+    <video id="video1" class="carousel-video" muted>
+        <source src="img/carousel/slideshow1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video id="video2" class="carousel-video" muted>
+        <source src="img/carousel/slideshow2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video id="video3" class="carousel-video" muted>
+        <source src="img/carousel/slideshow3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video id="video4" class="carousel-video" muted>
+        <source src="img/carousel/slideshow4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<script src="script/carousel.js"></script>
 <section class="history">
     <h1 class="title-page">Small Stories</h1>
 

@@ -1,0 +1,115 @@
+.testimonies {
+    background-color: #E3E0E0;
+    display: flex;
+    flex-direction: column;
+    padding: 4% 6%;
+    gap: 3rem; /* already in rem */
+}
+
+.title-page {
+    font-family: 'Andada Pro';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 3.75rem; /* équivalent à 60px */
+    margin: 0 3%;
+}
+
+.testimony-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimony-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.testimony-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    gap: 1rem; /* équivalent à 16px */
+}
+
+.testimony {
+    display: flex;
+    align-items: stretch; /* Ajustement de la hauteur */
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.testimony h2 {
+    font-size: 3rem; /* équivalent à 30px */
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Nécessaire pour le positionnement des pseudo-éléments */
+    margin: 2rem 0; /* Espace pour les traits */
+}
+
+.testimony h2::before,
+.testimony h2::after {
+    content: '';
+    position: absolute;
+
+    width: 20%;
+    height: 0.25vh; /* 2px en rem */
+    background-color: #000; /* Couleur de la ligne */
+}
+
+.testimony h2::before {
+    top: 0;
+    left: 10%;
+    right: 10%;
+}
+
+.testimony h2::after {
+    bottom: 0;
+    left: 70%;
+    right: 70%;
+}
+
+.testimony p {
+    font-size: 1.25rem; /* équivalent à 20px */
+}
+
+/* Styles pour petits écrans (téléphones) */
+@media (max-width: 1169px) {
+    .title-page {
+        font-size: 2.5rem; /* équivalent à 40px */
+        margin: 0 2%;
+    }
+
+    .testimony {
+        flex-direction: column; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .reverse {
+        flex-direction: column-reverse; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .testimony-img, .testimony-text {
+        width: 100%;
+    }
+
+    .testimony-text {
+        margin-top: 1rem; /* équivalent à 16px */
+    }
+
+    .testimony h2::before{
+        left: 5%; /* Réduire la largeur des traits pour petits écrans */
+        right: 5%;
+    }
+
+    .testimony h2::after {
+        left: 75%; /* Réduire la largeur des traits pour petits écrans */
+        right: 75%;
+    }
+}

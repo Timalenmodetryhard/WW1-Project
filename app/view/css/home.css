@@ -27,15 +27,10 @@
     height: auto;
 }
 
-.article-img-ratio {
-    width: 100%;
-    display: block;
-}
-
 .article-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 50%;
     gap: 1rem; /* équivalent à 16px */
 }
@@ -49,9 +44,11 @@
     gap: 2rem;
 }
 
-.corn-flowers h2, .poppy h2 {
+.corn-flowers h2, .poppy h2, .museum-presentation h2 {
     font-size: 3rem; /* équivalent à 30px */
     text-align: center;
+    position: relative; /* Nécessaire pour le positionnement des pseudo-éléments */
+    margin: 2rem 0; /* Espace pour les traits */
 }
 
 .museum-presentation h2 {
@@ -59,10 +56,47 @@
     text-align: center;
 }
 
-.museum-presentation p, .corn-flowers p, .poppy p {
+.article-text h2::before,
+.article-text h2::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 0.25vh; /* 2px en rem */
+    background-color: #000; /* Couleur de la ligne */
+}
+
+.article-text h2::before {
+    top: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 70%;
+}
+
+.article-text h2::after {
+    bottom: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 10%;
+}
+
+.article-text p {
     font-size: 1.25rem; /* équivalent à 20px */
 }
 
+.carousel {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-video{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-video.active{
+    display: block;
+}
 /* Styles pour petits écrans (téléphones) */
 @media (max-width: 1169px) {
     .title-page {
@@ -86,5 +120,13 @@
 
     .article-text {
         margin-top: 1rem; /* équivalent à 16px */
+    }
+
+    .article-text h2::before {
+        left: 5%;
+    }
+
+    .article-text h2::after {
+        left: 75%;
     }
 }
