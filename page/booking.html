@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Place</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="booking-title">Booking</h2>
+    <article class="opening-hour">
+        <div class="open-title">
+            <h3 class="hour-title">Opening hours</h3>
+        </div>
+        <div class="hours">
+            <div class="moon-day">
+                <p class="day">Monday</p>
+                <p class="time">close</p>
+            </div>
+            <div class="tue-day">
+                <p class="day">Thuesday</p>
+                <p class="time">11am - 2pm</p>
+            </div>
+            <div class="wen-day">
+                <p class="day">Wednesday</p>
+                <p class="time">11am - 2pm</p>
+            </div>
+            <div class="thr-day">
+                <p class="day">Thursday</p>
+                <p class="time">11am - 2pm</p>
+            </div>
+            <div class="fri-day">
+                <p class="day">Friday</p>
+                <p class="time">close</p>
+            </div>
+            <div class="sat-day">
+                <p class="day">Saterday</p>
+                <p class="time">close</p>
+            </div>
+            <div class="sun-day">
+                <p class="day">Sunday</p>
+                <p class="time">11am - 2pm</p>
+            </div>
+        </div>
+        <div class="detail-hour">
+            <p>Closed Monday, Friday and Saterday, exept for special events</p>
+        </div>
+    </article>
+    <main>
+        <h2 class="booking-title">Booking</h2>
+        <form action="booking.php" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="lastname">Lastname:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="address">Full address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div>
+                <label for="guests">Guests:</label>
+                <input type="number" id="guests" name="guests" required>
+            </div>
+            <div style="grid-column: span 2;">
+                <label for="complement">More information:</label>
+                <textarea name="more-information" id="complement"></textarea>
+            </div>
+            <div style="grid-column: span 2;">
+                <input type="submit" value="Book">
+            </div>
+        </form>
+    </main>
+</body>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .booking-title {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .opening-hour {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0.1em; 
+            border-bottom: 1px solid #000;
+            border-top: 1px solid #000;  
+        }
+        .open-title {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 1.5sm
+        }
+        .hour-title {
+            font-weight: bold;
+        }
+        .hours {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+           
+            padding: 2em
+        }
+        .moon-day, .tue-day, .wen-day, .thr-day, .fri-day, .sat-day, .sun-day {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            min-width: 141px;
+            align-items: center;
+        }
+        .day {
+            width: 100%;
+            font-weight: bold;
+
+        }
+        .time {
+            width: 100%;
+            border: 1px solid #000;
+        }
+        .detail-hour {
+
+            font-style: italic;
+            color: red;
+        }
+        main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #FC7D26;
+    box-shadow: 0 0 8px rgba(252, 125, 38, 0.2);
+    outline: none;
+}
+
+textarea {
+    grid-column: span 2;
+    height: 120px;
+}
+
+input[type="submit"] {
+    grid-column: span 2;
+    padding: 15px;
+    background-color: #FC7D26;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #e06920;
+}
+
+    </style>
+</body>
+</html>
