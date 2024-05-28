@@ -30,6 +30,10 @@ class BaseController extends Controller
     {
         $this->loadView('helpandvolunteer.php');
     }
+    public function volunteer()
+    {
+        $this->loadView('volunteer.php');
+    }
     public function praticalinfos()
     {
         $this->loadView('praticalinfos.php');

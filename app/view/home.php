@@ -17,19 +17,18 @@
     </video>
 </div>
 <script src="script/carousel.js"></script>
-<section class="history">
-    <h1 class="title-page">Small Stories</h1>
+<section class="presentation">
+    <h1 class="title-page">Welcome to WW1 Remembrance Centre</h1>
 
-    <div class="museum-presentation">
-        <article class="article-img">
-            <img src="img/flower/champ.png" alt="museum" title="Explore the remembrance museum and retrace the life in the field">
-        </article>
-        
+    <div class="museum-presentation">        
         <article class="article-text"> 
             <h2>Explore the remembrance museum and retrace the life in the field</h2>
             <p>The WW1 Remembrance Center provides a captivating immersion into this crucial period of history. The museum's exhibitions engage visitors by allowing them to relive key moments of the conflict. Authentic artifacts, moving photographs, and poignant accounts depict the daily lives of soldiers and civilians, portraying the challenges and sacrifices of life on the front lines. Beyond its historical significance, the WW1 Remembrance Centre serves as a place for reflection and commemoration. Visitors can pay tribute to fallen heroes by exploring the dedicated memorial. Whether you're a history enthusiast or simply curious about the past, a visit to the WW1 Remembrance Centre offers a rewarding and memorable experience. It's a journey through time that helps us better understand the sacrifices and heroes who have shaped our history.</p>
         </article>
-    </div>   
+    </div>
+</section>
+<section class="history">   
+    <h1 class="title-page">Small stories</h1>
     
     <div class="corn-flowers">
         <article class="article-text">

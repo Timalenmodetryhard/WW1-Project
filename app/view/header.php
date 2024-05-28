@@ -14,6 +14,7 @@
         include_once __DIR__ . '\css\event.css';
         include_once __DIR__ . '\css\donation.css';
         include_once __DIR__ . '\css\helpandvolunteer.css';
+        include_once __DIR__ . '\css\volunteer.css';
         include_once __DIR__ . '\css\testimony.css';
         include_once __DIR__ . '\css\contactus.css';
         include_once __DIR__ . '\css\praticalinfos.css';
@@ -72,7 +73,8 @@
         <li class="menu-option">
           <a>Help & Volunteer</a>
           <ul class="submenu">
-            <li><a href="/helpandvolunteer">Volunteer Guideline</a></li>
+            <li><a href="/helpandvolunteer">Guideline</a></li>
+            <li><a href="/volunteer">Volunteer</a></li>
             <li><a href="#">Our Gift Shop</a></li>
             <li><a href="#">Artifact Wanted</a></li>
           </ul>

@@ -6,13 +6,22 @@
     gap: 3rem;
 }
 
+.presentation{
+    padding: 4% 6%;
+    background-color: #2C2A2D;
+}
+
 .title-page {
     font-family: 'Andada Pro';
     font-weight: bold;
     display: flex;
     justify-content: center;
-    font-size: 3.75rem; /* équivalent à 60px */
+    font-size: 3.75rem;
     margin: 0 3%;
+}
+
+.presentation .title-page {
+    color: white;
 }
 
 .article-img {
@@ -35,6 +44,10 @@
     gap: 1rem; /* équivalent à 16px */
 }
 
+.museum-presentation .article-text {
+    width: 100%;
+}
+
 .museum-presentation, .corn-flowers, .poppy {
     display: flex;
     align-items: stretch; /* Ajustement de la hauteur */
@@ -42,6 +55,44 @@
     width: 100%;
     flex-direction: row;
     gap: 2rem;
+}
+
+.museum-presentation {
+    position: relative; /* Nécessaire pour l'overlay */
+    border: 1px solid black;
+    color: white; /* Texte en blanc */
+    padding: 2rem; /* Padding de 2rem */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond sombre */
+}
+
+.museum-presentation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Double la largeur pour l'animation */
+    height: 100%;
+    background-image: url("/img/carousel/image.png");
+    background-size: cover;
+    background-position: 0 0;
+    filter: blur(5px) brightness(50%); /* Appliquer un flou à l'image de fond */
+    z-index: 1; /* Positionne l'overlay entre l'image de fond et le contenu */
+    opacity: 0.5; /* Ajouter un effet sombre */
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.museum-presentation .article-text {
+    position: relative; /* Pour que le texte soit au-dessus de l'overlay */
+    z-index: 2;
 }
 
 .corn-flowers h2, .poppy h2, .museum-presentation h2 {
@@ -54,6 +105,7 @@
 .museum-presentation h2 {
     font-size: 1.875rem; /* équivalent à 30px */
     text-align: center;
+    padding: 0 30%;
 }
 
 .article-text h2::before,
@@ -75,8 +127,26 @@
     left: 10%;
 }
 
+.museum-presentation .article-text h2::before {
+    background-color: white;
+    width: 10%;
+    top: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 70%;
+}
+
+.museum-presentation .article-text h2::after {
+    background-color: white;
+    width: 10%;
+    bottom: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 20%;
+}
+
 .article-text p {
     font-size: 1.25rem; /* équivalent à 20px */
+}
+
+.museum-presentation .article-text p{
+    text-align: justify;
 }
 
 .carousel {
@@ -87,17 +157,19 @@
     z-index: 0;
     justify-content: center;
     align-items: center;
+    background-color:#2C2A2D;
 }
 
-.carousel-video{
+.carousel-video {
     display: none;
     width: 100%;
     height: auto;
 }
 
-.carousel-video.active{
+.carousel-video.active {
     display: block;
 }
+
 /* Styles pour petits écrans (téléphones) */
 @media (max-width: 1169px) {
     .title-page {
