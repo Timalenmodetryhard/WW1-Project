@@ -55,38 +55,17 @@
         </div>
     </form>
     <?php
-    // Output messages
-    $responses = [];
-    // Check if the form was submitted
-    if (isset($_POST['email'], $_POST['name'], $_POST['more-information'])) {
-        // Validate email adress
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $responses[] = 'Email is not valid!';
-        }
-        // Make sure the form fields are not empty
-        if (empty($_POST['email']) || empty($_POST['name']) || empty($_POST['more-information'])) {
-            $responses[] = 'Please complete all fields!';
-        } 
-        // If there are no errors
-        if (!$responses) {
-            // Where to send the mail? It should be your email address
-            $to      = 'leeliandu972@gmail.com';
-            // Send mail from which email address?
-            $from = 'leeliandu973@gmail.com';
-            // Mail subject
-            $subject = "Volunteer";
-            // Mail message
-            $message = $_POST['more-information'];
-            // Mail headers
-            $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-            // Try to send the mail
-            if (mail($to, $subject, $message, $headers)) {
-                // Success
-                $responses[] = 'Message sent!';		
-            } else {
-                // Fail
-                $responses[] = 'Message could not be sent! Please check your mail server settings!';
-            }
+    if (isset($POST_["more-information"])){
+        $message = "This message has been sent from the Volunteer Page of the site WW1 Remembrance Centre
+        Name : " . $POST_["name"] . "
+        Email : " . $POST_["email"] . "
+        Phone : " . $POST_["phone"] . "
+        address : " . $POST_["address"] . "
+        Birth date : " . $POST_["date"] . "
+        Message : " . $POST["more-information"];
+        $retour = mail("leeliandu973@gmail.com", "Volunteer", $POST_["more-information"], "From:contact@exemplesite.fr" . "\r\n" . "Reply-To" . $POST_["email"]);
+        if ($retour) {
+            echo "<p>Le mail a bien été envoyé</p>";
         }
     }
     ?>
