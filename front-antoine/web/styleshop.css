@@ -1,0 +1,219 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.produits {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ccc;
+}
+
+.produit {
+    position: relative; /* Nouveau ! */
+    display: inline-block;
+    width: 23%; /* Ajuster la largeur selon vos besoins */
+    text-align: center;
+    padding: 1%;
+}
+
+.produit img {
+    width: 100%;
+    height: auto;
+}
+
+.produit h3 {
+    margin-top: 10px;
+}
+
+.produit p {
+    margin-top: 5px;
+}
+
+.produit .prix {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.produit .description {
+    display: none;
+    position: absolute; /* Nouveau ! */
+    bottom: 19%; /* Nouveau ! */
+    left: 4%; /* Nouveau ! */
+    width: 89%; /* Nouveau ! */
+    height: 72%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nouveau ! */
+    color: white; /* Nouveau ! */
+    padding: 10px; /* Nouveau ! */
+    align-items: center;
+}
+
+.produit:hover .description {
+    display: flex; /* Afficher au survol */
+}
+
+.footerup{
+    text-align: center;
+    padding: 3px;
+    background-color: #1C1C1C;
+    color: #ED6807;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .map {
+    flex: 1;
+    margin-right: 20px;
+    padding: 2%;
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  .infsocial {
+    margin-left: 20px;
+    width: 70%;
+  }
+
+  .informations {
+    text-align: left;
+    margin: 20px auto;
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 20px;
+    margin-left: 10%;
+
+}
+.informations::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: #ccc;
+  margin-top: 20px;
+}
+
+.informations h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.liens {
+    display: flex;
+    flex-direction: column; /* Disposer les éléments en colonne */
+    margin-top: 20px;
+    align-items: left;
+}
+
+.liens a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+  .follow-us {
+    text-align: left;
+    margin: 20px auto;
+    width: 100%;
+    margin-top: 20px;
+    flex: 0 0 auto;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.follow-us h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reseaux-sociaux {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.reseaux-sociaux li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.reseaux-sociaux a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    color: #000;
+    line-height: 32px;
+    text-align: center;
+}
+
+.reseaux-sociaux i {
+    font-size: 20px;
+}
+
+
+.copy {
+  background-color: #1C1C1C;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.copy::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2340px; /* Déplace la ligne vers le bas de 20 pixels */
+  left: 1%; /* Déplace la ligne vers la gauche de 10 pixels */
+  width: 90%; /* Augmente la largeur de la ligne à 2 pixels */
+  height: 2px; /* Réduit la hauteur de la ligne de 40 pixels */
+  background-color: #ffffff;
+  margin-left: 1%;
+}
+
+.logo {
+  display: inline-block;
+  padding: 1%;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+.copytext{
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  flex: 0 0 auto;
+  padding: 20px;
+}
+p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
