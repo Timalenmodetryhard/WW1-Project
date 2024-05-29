@@ -7,7 +7,6 @@ class Router
         require BASE_PATH . '/app/routes.php';
 
         $request = trim($_SERVER['REQUEST_URI']);
-
         if (array_key_exists($request, routes)) {
             $controller = routes[$request][0];
             $method = routes[$request][1];

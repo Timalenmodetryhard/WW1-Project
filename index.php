@@ -1,5 +1,7 @@
 <?php
-include __DIR__ . '/app/view/header.php';
+session_start();
+
+require __DIR__ . '/app/view/header.php';
 
 define('BASE_PATH', realpath(__DIR__));
 

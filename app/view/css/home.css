@@ -1,0 +1,205 @@
+/* Styles généraux (pour tous les écrans) */
+.history {
+    display: flex;
+    flex-direction: column;
+    padding: 4% 6%;
+    gap: 3rem;
+}
+
+.presentation{
+    padding: 4% 6%;
+    background-color: #2C2A2D;
+}
+
+.title-page {
+    font-family: 'Andada Pro';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 3.75rem;
+    margin: 0 3%;
+}
+
+.presentation .title-page {
+    color: white;
+}
+
+.article-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    gap: 1rem; /* équivalent à 16px */
+}
+
+.museum-presentation .article-text {
+    width: 100%;
+}
+
+.museum-presentation, .corn-flowers, .poppy {
+    display: flex;
+    align-items: stretch; /* Ajustement de la hauteur */
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.museum-presentation {
+    position: relative; /* Nécessaire pour l'overlay */
+    border: 1px solid black;
+    color: white; /* Texte en blanc */
+    padding: 2rem; /* Padding de 2rem */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond sombre */
+}
+
+.museum-presentation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Double la largeur pour l'animation */
+    height: 100%;
+    background-image: url("/img/carousel/image.png");
+    background-size: cover;
+    background-position: 0 0;
+    filter: blur(5px) brightness(50%); /* Appliquer un flou à l'image de fond */
+    z-index: 1; /* Positionne l'overlay entre l'image de fond et le contenu */
+    opacity: 0.5; /* Ajouter un effet sombre */
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.museum-presentation .article-text {
+    position: relative; /* Pour que le texte soit au-dessus de l'overlay */
+    z-index: 2;
+}
+
+.corn-flowers h2, .poppy h2, .museum-presentation h2 {
+    font-size: 3rem; /* équivalent à 30px */
+    text-align: center;
+    position: relative; /* Nécessaire pour le positionnement des pseudo-éléments */
+    margin: 2rem 0; /* Espace pour les traits */
+}
+
+.museum-presentation h2 {
+    font-size: 1.875rem; /* équivalent à 30px */
+    text-align: center;
+    padding: 0 30%;
+}
+
+.article-text h2::before,
+.article-text h2::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 0.25vh; /* 2px en rem */
+    background-color: #000; /* Couleur de la ligne */
+}
+
+.article-text h2::before {
+    top: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 70%;
+}
+
+.article-text h2::after {
+    bottom: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 10%;
+}
+
+.museum-presentation .article-text h2::before {
+    background-color: white;
+    width: 10%;
+    top: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 70%;
+}
+
+.museum-presentation .article-text h2::after {
+    background-color: white;
+    width: 10%;
+    bottom: -1rem; /* Ajustez cette valeur pour contrôler la distance entre la ligne et le titre h2 */
+    left: 20%;
+}
+
+.article-text p {
+    font-size: 1.25rem; /* équivalent à 20px */
+}
+
+.museum-presentation .article-text p{
+    text-align: justify;
+}
+
+.carousel {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    background-color:#2C2A2D;
+}
+
+.carousel-video {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-video.active {
+    display: block;
+}
+
+/* Styles pour petits écrans (téléphones) */
+@media (max-width: 1169px) {
+    .title-page {
+        font-size: 2.5rem; /* équivalent à 40px */
+        margin: 0 2%;
+    }
+
+    .museum-presentation, .poppy {
+        flex-direction: column; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .corn-flowers {
+        flex-direction: column-reverse; /* Une seule colonne */
+        gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .article-img, .article-text {
+        width: 100%;
+    }
+
+    .article-text {
+        margin-top: 1rem; /* équivalent à 16px */
+    }
+
+    .article-text h2::before {
+        left: 5%;
+    }
+
+    .article-text h2::after {
+        left: 75%;
+    }
+}

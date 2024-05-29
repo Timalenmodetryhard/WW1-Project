@@ -1,0 +1,134 @@
+.booking-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.25rem; /* 20px en rem */
+}
+.opening-hour {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 3.5rem; /* 3.5em en rem */
+    border-bottom: 0.0625rem solid #000; /* 1px en rem */
+    border-top: 0.0625rem solid #000; /* 1px en rem */
+}
+.open-title {
+    width: 100%;
+    margin-bottom: 1.25rem; /* 20px en rem */
+}
+.hour-title {
+    font-weight: 800;
+}
+.hours {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem; /* 2em en rem */
+}
+.moon-day, .tue-day, .wen-day, .thr-day, .fri-day, .sat-day, .sun-day {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    min-width: 141px;
+    gap: 1rem; /* 1em en rem */
+    align-items: center;
+}
+.day {
+    width: 100%;
+    font-weight: 800;
+}
+.time {
+    width: 100%;
+    padding: 0.5rem 0; /* 0.5rem en rem */
+    border: 0.0625rem solid #000; /* 1px en rem */
+}
+.detail-hour {
+    font-weight: 800;
+    font-style: italic;
+    color: red;
+}
+.booking-details .booking-hours {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1.25rem; /* 20px en rem */
+    width: 100%;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* 0 4px 10px en rem */
+}
+.booking-hours {
+    margin: 2% 0;
+    margin-bottom: 6%;
+}
+.booking-details {
+    padding: 4% 20%;
+    margin: 6% 0;
+    border-width: 0.0625rem 0; /* 1px en rem */
+    border-style: solid;
+    border-color: black;
+    justify-content: center;
+}
+.booking-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem; /* 2.5em en rem */
+    margin-bottom: 1.875rem; /* 30px en rem */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+.booking-details form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 6rem;
+    width: 100%;
+}
+.booking-details label {
+    display: block;
+    margin-bottom: 0.5rem; /* 8px en rem */
+    font-weight: bold;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+}
+.booking-details input[type="text"],
+.booking-details input[type="email"],
+.booking-details input[type="tel"],
+.booking-details input[type="date"],
+.booking-details input[type="time"],
+.booking-details input[type="number"],
+.booking-details textarea {
+    width: 100%;
+    padding: 0.75rem; /* 12px en rem */
+    border: 0.0625rem solid #ddd; /* 1px en rem */
+    box-sizing: border-box;
+    margin-bottom: 0.625rem; /* 10px en rem */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.booking-details input[type="text"]:focus,
+.booking-details input[type="email"]:focus,
+.booking-details input[type="tel"]:focus,
+.booking-details input[type="date"]:focus,
+.booking-details input[type="time"]:focus,
+.booking-details input[type="number"]:focus,
+.booking-details textarea:focus {
+    border-color: #FC7D26;
+    box-shadow: 0 0 0.5rem rgba(252, 125, 38, 0.2); /* 0 0 8px en rem */
+    outline: none;
+}
+.booking-details textarea {
+    grid-column: span 2;
+    height: 7.5rem; /* 120px en rem */
+}
+.booking-details input[type="submit"] {
+    grid-column: span 2;
+    padding: 0.9375rem; /* 15px en rem */
+    background-color: #FC7D26;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem; /* 4px en rem */
+    cursor: pointer;
+    font-size: 1.2rem; /* 1.2em en rem */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1.25rem; /* 20px en rem */
+}
+.booking-details input[type="submit"]:hover {
+    background-color: #e06920;
+}
