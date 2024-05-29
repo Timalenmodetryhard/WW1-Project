@@ -75,7 +75,7 @@
           <ul class="submenu">
             <li><a href="/helpandvolunteer">Guideline</a></li>
             <li><a href="/volunteer">Volunteer</a></li>
-            <li><a href="#">Our Gift Shop</a></li>
+            <li><a href="/givshop.php">Our Gift Shop</a></li>
           </ul>
         </li>
       </ul>      
