@@ -59,15 +59,20 @@
         </div>
         <div>
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" required patterne="[0-9]+" inputmode="numeric" title='Please enter numbers only'>
         </div>
+        <script>
+            docuemnt.getelementbyid('phone').addEventlistener('input', function (e) {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '');
+            });
+        </script>
         <div>
             <label for="address">Full address:</label>
             <input type="text" id="address" name="address" required>
         </div>
         <div>
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date" required min="<?php echo date("Y-M-D")?>">
         </div>
         <div>
             <label for="time">Time:</label>
