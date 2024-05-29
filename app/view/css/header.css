@@ -14,7 +14,6 @@ html, body {
 
 body {
   position: absolute;
-  width: 100vw;
 }
 
 /* Styles de l'en-tête */
@@ -29,7 +28,7 @@ header {
   flex-wrap: wrap;
   position:fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 2;
 }
 
 .hide-header {
@@ -216,10 +215,9 @@ header button:hover {
 }
 
 /* Style pour les liens de la liste de navigation principale au survol */
-.menu li a:hover, .menu li a:focus {
+.menu li a:hover {
   color: #A1CD22; /* Couleur de fond au survol */
   border-bottom: solid 0.125rem #A1CD22; /* 2px en rem */
-  cursor: pointer;
 }
 
 .submenu {
@@ -235,7 +233,7 @@ header button:hover {
 }
 
 /* Afficher les sous-menus au survol */
-.menu li:hover .submenu, .menu li:focus .submenu {
+.menu li:hover .submenu {
   display: block;
 }
 

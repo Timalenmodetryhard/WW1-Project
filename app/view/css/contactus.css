@@ -42,7 +42,7 @@
     width: 48%;
 }
 
-.contactus label {
+label {
     display: flex;
     margin-top: 7%;
 }
@@ -61,7 +61,7 @@
     height: 20rem; /* équivalent à 320px */
 }
 
-.contactus input[type="submit"] {
+input[type="submit"] {
     background-color: #62762a;
     margin-top: 10%;
     color: white;
