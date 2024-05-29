@@ -28,15 +28,15 @@
       <div class="select-wrapper">
         
         <select id="flag-selector">
-          <option value="img/flags/uk.png">English</option>
-          <option value="img/flags/france.png">Français</option>
-          <option value="img/flags/itali.png">Italia</option>
-          <option value="img/flags/german.png">Deutsch</option>
-          <option value="img/flags/spanish.png">Español</option>
-          <option value="img/flags/china.png">中国人</option>
+          <option value="/img/flags/uk.png">English</option>
+          <option value="/img/flags/france.png">Français</option>
+          <option value="/img/flags/itali.png">Italia</option>
+          <option value="/img/flags/german.png">Deutsch</option>
+          <option value="/img/flags/spanish.png">Español</option>
+          <option value="/img/flags/china.png">中国人</option>
         </select>
         <div class="selected-image">
-          <img id="selected-image" src="img/flags/uk.png" alt="Selected Flag">
+          <img id="selected-image" src="/img/flags/uk.png" alt="Selected Flag">
         </div>
       </div>
       <script>
@@ -48,16 +48,16 @@
       <div class="header-title">
         <h1>WWI REMEMBRANCE CENTRE</h1>
       </div>
-      <a id="schedule-tour-popup-button" href="/booking">Book your visit</a> 
+      <a id="schedule-tour-popup-button" href="/booking#booking-form">Book your visit</a> 
       <img src="img/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="/">Home</a></li>
+        <li><a href="/index.php">Home</a></li>
         <li class="menu-option">
           <a>Visit</a>
           <ul class="submenu">
-            <li><a href="#">Events</a></li>
+
             <li><a href="/booking">Booking Planning</a></li>
           </ul>
         </li>
@@ -76,7 +76,6 @@
             <li><a href="/helpandvolunteer">Guideline</a></li>
             <li><a href="/volunteer">Volunteer</a></li>
             <li><a href="#">Our Gift Shop</a></li>
-            <li><a href="#">Artifact Wanted</a></li>
           </ul>
         </li>
       </ul>      

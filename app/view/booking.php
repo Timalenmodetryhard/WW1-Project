@@ -44,7 +44,7 @@
 ?>
 <section class="booking-details">
     <h2 class="booking-title">Booking</h2>
-    <form action="booking.php" method="post">
+    <form action="booking.php" method="post" id="booking-form">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
