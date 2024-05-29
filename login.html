@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="WW1 Remember Center">
+    <meta name="author" content="">
 
     <title>SB Admin 2 - Login</title>
 
@@ -41,7 +41,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user" action="connexion.php" method="post" enctype="application/x-www-form-urlencoded">
+                                    <form class="user">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -60,11 +60,22 @@
                                         </div>
                                         <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Login
-                                        </a>                                    
+                                        </a>
+                                        <hr>
+                                        <a href="index.html" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Login with Google
+                                        </a>
+                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                        </a>
                                     </form>
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="register.html">Create an Account!</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -76,34 +87,7 @@
         </div>
 
     </div>
-    <div class="center-container">
-        <div class="login-logo">
-            <img src="img/logo.png" alt="logo" width="60%" height="55%">
-        </div>
-       
-        <div class="text-center">
-            <h3 style="color: #FC7D26;">World War I Remembrance Center</h3>
-        </div>
-    </div>
-    
-    <style>
-        .center-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .login-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .text-center {
-            margin-top: 20px; 
-            text-align: center;
-        }
-    </style>
-    
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
