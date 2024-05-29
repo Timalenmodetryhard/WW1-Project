@@ -54,8 +54,46 @@
             <input type="submit" value="Send">
         </div>
     </form>
+    <div class="volunteer-error">
     <?php
-    // Output messages
+    require_once  BASE_PATH . "/vendor/autoload.php";
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+    $mail = new PHPMailer (true);
+    if (isset($_POST["more-information"])) {
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            echo 'Email is not valid!';
+        }
+        if (empty($_POST['email']) || empty($_POST['name']) || empty($_POST['more-information'])) {
+            echo 'Please complete all fields!';
+        } 
+        try {
+            $mail->SMTPDebug = 0;    
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->Host = "smtp.gmail.com";
+            $mail->Port = 465;
+            $mail->SMTPSecure = 'ssl';  
+            $mail->Username = "leeliandu973@gmail.com";
+            $mail->Password = "iifa rdcx yqwf eqki";
+            $mail->setFrom("leeliandu973@gmail.com", '');
+            $mail->addAddress('leeliandu973@gmail.com');
+            $mail->addCC($_POST["email"], 'Volunteer');
+            $mail->isHTML(true);
+            $mail->Subject = 'Volunteer proposal';
+            $mail->Body = $_POST['more-information'];
+            $mail->CharSet = 'UTF-8';
+            $mail->Encoding = 'base64';
+            $mail->send();
+            echo "Mail has been sent successfully!";
+            header("Location: /volunteer");
+            exit();
+        } catch (Exception $e) {
+            echo "Mailer Error:please retry or contact the support.";
+        }
+    }
+    /*
     $responses = [];
     // Check if the form was submitted
     if (isset($_POST['email'], $_POST['name'], $_POST['more-information'])) {
@@ -88,6 +126,7 @@
                 $responses[] = 'Message could not be sent! Please check your mail server settings!';
             }
         }
-    }
+    */
     ?>
+    </div>
 </section>
