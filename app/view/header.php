@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php 
+    $fileName= basename($_SERVER['SERVER_NAME'], ".php"); // get the file name
+    $pageName = ucfirst($fileName) . ' - WW1 Remembrance Centre'; // set the page name
+    ?>
+    <title><?= isset($title) ? $title : $pageTitle; ?></title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <style>
       <?php
@@ -21,6 +25,12 @@
         include_once __DIR__ . '\css\booking.css';
       ?>
     </style>
+    <meta name="author" content="WW1 Remembrance Centre"> 
+    <meta name="description" content="WW1 Remembrance Centre is a museum that is dedicated to the remembrance of the First World War.">
+    <meta name="keywords" content="WW1, Remembrance, Centre, Museum, First World War, World War 1, War, History, Remembrance Centre, WW1 Remembrance Centre">
+    <link rel="icon" href="/img/logo/logo.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
 </head>
 <body x-data="{openCon: false, openIns: false}"></body>
 <header>  
@@ -28,9 +38,9 @@
       <div class="select-wrapper">
         
         <select id="flag-selector">
-          <option value="/img/flags/uk.png">English</option>
+          <option value="/img/flags/uk.png" >English</option>
           <option value="/img/flags/france.png">Français</option>
-          <option value="/img/flags/itali.png">Italia</option>
+          <option value="/img/flags/itali.png" >Italia</option>
           <option value="/img/flags/german.png">Deutsch</option>
           <option value="/img/flags/spanish.png">Español</option>
           <option value="/img/flags/china.png">中国人</option>

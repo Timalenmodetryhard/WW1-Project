@@ -18,16 +18,16 @@
         <div class="follow-us">
           <h2>Follow Us</h2>
           <ul class="reseaux-sociaux">
-              <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><i class="fab fa-facebook-f"></i><img src="images/social/104498_facebook_icon.png" alt="facebook" style="width:42px;height:42px;"></a></li>
-              <li><a href="https://twitter.com/WW1Centre"><i class="fab fa-twitter"></i><img src="images/social/11244080_x_twitter_elon musk_twitter new logo_icon (1).png" alt="twitter" style="width:42px;height:42px;"></a></li>
-              <li><a href="https://www.youtube.com/@WW1remcen"><i class="fab fa-youtube"></i><img src="images/social/317714_video_youtube_icon.png" alt="youtube" style="width:42px;height:42px;"></a></li>
+              <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><i class="fab fa-facebook-f"></i><img src="images/social/104498_facebook_icon.png" alt="facebook of WW1 Remembrance Centre" style="width:42px;height:42px;"></a></li>
+              <li><a href="https://twitter.com/WW1Centre"><i class="fab fa-twitter"></i><img src="images/social/11244080_x_twitter_elon musk_twitter new logo_icon (1).png" alt="twitter of WW1 Remembrance Centre" style="width:42px;height:42px;"></a></li>
+              <li><a href="https://www.youtube.com/@WW1remcen"><i class="fab fa-youtube"></i><img src="images/social/317714_video_youtube_icon.png" alt="youtube of WW1 Remembrance Centre" style="width:42px;height:42px;"></a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="copy">
       <div class="logo">
-        <a href="mainpage"><img src="images/logo/logo.png" class="logo img" alt="logo" style="width:100px;height:100px;"></a>
+        <a href="mainpage"><img src="images/logo/logo.png" class="logo img" alt="logo of WW1 Remembrance Centre" style="width:100px;height:100px;"></a>
       </div>
       <div class="copytext">
         <p>&copy; 2024 WW1 remembrance Center</p>
