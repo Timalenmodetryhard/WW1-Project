@@ -23,6 +23,7 @@
         include_once __DIR__ . '\css\contactus.css';
         include_once __DIR__ . '\css\praticalinfos.css';
         include_once __DIR__ . '\css\booking.css';
+        include_once __DIR__ . '\css\giftshop.css';
       ?>
     </style>
     <meta name="author" content="WW1 Remembrance Centre"> 
@@ -38,15 +39,15 @@
       <div class="select-wrapper">
         
         <select id="flag-selector">
-          <option value="/img/flags/uk.png" >English</option>
-          <option value="/img/flags/france.png">Français</option>
-          <option value="/img/flags/itali.png" >Italia</option>
-          <option value="/img/flags/german.png">Deutsch</option>
-          <option value="/img/flags/spanish.png">Español</option>
-          <option value="/img/flags/china.png">中国人</option>
+          <option value="/assets/img/flags/uk.png">English</option>
+          <option value="/assets/img/flags/france.png">Français</option>
+          <option value="/assets/img/flags/itali.png">Italia</option>
+          <option value="/assets/img/flags/german.png">Deutsch</option>
+          <option value="/assets/img/flags/spanish.png">Español</option>
+          <option value="/assets/img/flags/china.png">中国人</option>
         </select>
         <div class="selected-image">
-          <img id="selected-image" src="/img/flags/uk.png" alt="Selected Flag">
+          <img id="selected-image" src="/assets/img/flags/uk.png" alt="Selected Flag">
         </div>
       </div>
       <script>
@@ -59,11 +60,11 @@
         <h1>WWI REMEMBRANCE CENTRE</h1>
       </div>
       <a id="schedule-tour-popup-button" href="/booking#booking-form">Book your visit</a> 
-      <img src="img/responsive/burgeur_icone.png" alt="responsiv logo">
+      <img src="/assetsimg/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="/index.php">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="menu-option">
           <a>Visit</a>
           <ul class="submenu">
@@ -83,16 +84,16 @@
         <li class="menu-option">
           <a>Help & Volunteer</a>
           <ul class="submenu">
-            <li><a href="/helpandvolunteer">Guideline</a></li>
+            <li><a href="/helpandvolunteer">Opportunities</a></li>
             <li><a href="/volunteer">Volunteer</a></li>
-            <li><a href="/givshop.php">Our Gift Shop</a></li>
+            <li><a href="/giftshop">Our Gift Shop</a></li>
           </ul>
         </li>
       </ul>      
     </nav>
 
-    <script src="script/burgeur.js"></script>
-    <script src="script/header_scroll.js"></script>
+    <script src="assets/script/burgeur.js"></script>
+    <script src="assets/script/header_scroll.js"></script>
   </div>
   </header>
   <div class="fake-header"></div>

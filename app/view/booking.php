@@ -39,12 +39,14 @@
         </div>
     </article>
 </section>
+
 <?php
     include_once __DIR__ . '\layout\event.php';
 ?>
+
 <section class="booking-details">
     <h2 class="booking-title">Booking</h2>
-    <form action="booking.php" method="post" id="booking-form">
+    <form method="post" id="booking-form">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -76,7 +78,7 @@
         </div>
         <div>
             <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required>
+            <input type="time" id="time" name="time" required min="11:00" max="14:00">
         </div>
         <div>
             <label for="guests">Guests:</label>
@@ -91,3 +93,79 @@
         </div>
     </form>
 </section>
+
+<?php
+require_once BASE_PATH . "/vendor/autoload.php";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Vérifiez que tous les champs requis sont définis et non vides
+    $required_fields = ['name', 'lastname', 'email', 'phone', 'address', 'date', 'time', 'guests', 'more-information'];
+    $missing_fields = [];
+
+    foreach ($required_fields as $field) {
+        if (empty($_POST[$field])) {
+            $missing_fields[] = $field;
+        }
+    }
+
+    if (count($missing_fields) > 0) {
+        echo 'Please complete all fields: ' . implode(', ', $missing_fields);
+    } else {
+        // Tous les champs requis sont présents et non vides
+        $name = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+        $date = $_POST['date'];
+        $time = $_POST['time'];
+        $guests = $_POST['guests'];
+        $more_information = $_POST['more-information'];
+
+        $message = file_get_contents(BASE_PATH . '/app/view/layout/mail-booking.html'); 
+        $message = str_replace('%name%', $name, $message); 
+        $message = str_replace('%email%', $email, $message);
+        $message = str_replace('%lastname%', $lastname, $message);
+        $message = str_replace('%phone%', $phone, $message);
+        $message = str_replace('%address%', $address, $message);
+        $message = str_replace('%date%', $date, $message);
+        $message = str_replace('%time%', $time, $message);
+        $message = str_replace('%guests%', $guests, $message);
+        $message = str_replace('%more-information%', $more_information, $message);
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo 'Email is not valid!';
+        } else {
+            try {
+                $mail = new PHPMailer(true);
+                $mail->SMTPDebug = 0;
+                $mail->isSMTP();
+                $mail->SMTPAuth = true;
+                $mail->Host = "smtp.gmail.com";
+                $mail->Port = 465;
+                $mail->SMTPSecure = 'ssl';
+                $mail->Username = "leeliandu973@gmail.com";
+                $mail->Password = "iifa rdcx yqwf eqki";
+                $mail->setFrom("leeliandu973@gmail.com", $name);
+                $mail->addAddress('leeliandu973@gmail.com');
+                $mail->addCC($email, $name);
+                $mail->isHTML(true);
+                $mail->Subject = 'Booking visit';
+                $mail->msgHTML($message);
+                $mail->CharSet = 'UTF-8';
+                $mail->Encoding = 'base64';
+                $mail->send();
+                echo "Mail has been sent successfully!";
+                sleep(5);
+                header("Location: /volunteer");
+                exit();
+            } catch (Exception $e) {
+                echo "Mailer Error: please retry or contact the support.";
+            }
+        }
+    }
+}
+?>

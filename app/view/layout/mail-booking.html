@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Details</title>
+    <style>
+        /* Basic reset for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            color: #000;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #095933;
+            border-radius: 8px;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .content {
+            background-color: #D9D9D9;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #000;
+        }
+
+        .header {
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid black;
+        }
+
+        .header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .header p {
+            font-size: 0.875rem;
+        }
+
+        .details {
+            margin: 2rem 0;
+        }
+
+        .header-details {
+            background-color: #095933;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .content-details {
+            padding: 1rem;
+            border: 2px solid black;
+            border-top: none;
+            gap: 1rem;
+            background-color: #fff;
+            color: #000;
+            border-radius: 8px;
+        }
+
+        .content-details > div {
+            border: 1px solid black;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #505050;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .footer .links {
+            margin-bottom: 1rem;
+        }
+
+        .footer .social-media {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer .social-media img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="header">
+                <img src="https://yourdomain.com/path/to/logo.png" alt="logo">
+                <h1>WW1 Remembrance Centre</h1>
+                <p>Bastion, 6 Airport Service Rd<br>Portsmouth PO3 5PJ<br>023 9400 7775</p>
+            </div>
+            <h1>Booking Details</h1>
+            <h2>A new visitor has booked</h2>
+            <p>Appointment confirmed to visit the World War 1 Remembrance Centre on %date%, at %time%. Please find the details below:</p>
+            <div class="details">
+                <div class="header-details">
+                    <h2>Confirmed time :<br>%date% at %time%</h2>
+                </div>
+                <div class="content-details">
+                    <div><strong>Name : %lastname% %name%<br></strong></div>
+                    <div><strong>Email : %email%<br></strong></div>
+                    <div><strong>Phone number : %phone%<br></strong></div>
+                    <div><strong>Address : %address%<br></strong></div>
+                    <div><strong>Booking time : %date% at %time%<br></strong></div>
+                    <div><strong>Number of people : %guests%<br></strong></div>
+                    <div><strong>More information : %more-information%</strong></div> 
+                </div>
+            </div>
+            <h2>Need to change this appointment ?<br></h2>
+            <strong>Please send an email to : WW1MC.contact@myport.ac.uk</strong>
+        </div>
+        <div class="footer">
+            <div class="links">
+                <strong>Email: WW1MC.contact@myport.ac.uk</strong>
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><img src="https://yourdomain.com/path/to/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://twitter.com/WW1Centre"><img src="https://yourdomain.com/path/to/twitter.png" alt="twitter"></a></li>
+                    <li><a href="https://www.youtube.com/@WW1remcen"><img src="https://yourdomain.com/path/to/youtube.png" alt="youtube"></a></li>
+                </ul>
+            </div>
+            <div class="map">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+WW1+Remembrance+Centre" target="_blank">
+                    <img src="https://yourdomain.com/path/to/map-image.png" alt="map">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
