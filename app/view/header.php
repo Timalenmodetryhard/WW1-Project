@@ -53,7 +53,7 @@
       <script>
         document.getElementById('flag-selector').addEventListener('change', function() {
           var selectedValue = this.value;
-        ment.getElementById('selected-image').src = selectedValue;
+        document.getElementById('selected-image').src = selectedValue;
         });
       </script>
       <div class="header-title">
