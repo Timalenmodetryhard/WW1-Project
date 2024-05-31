@@ -12,18 +12,18 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <style>
       <?php
-        include_once __DIR__ . '\css\header.css';
-        include_once __DIR__ . '\css\footer.css';
-        include_once __DIR__ . '\css\home.css';
-        include_once __DIR__ . '\css\event.css';
-        include_once __DIR__ . '\css\donation.css';
-        include_once __DIR__ . '\css\helpandvolunteer.css';
-        include_once __DIR__ . '\css\volunteer.css';
-        include_once __DIR__ . '\css\testimony.css';
-        include_once __DIR__ . '\css\contactus.css';
-        include_once __DIR__ . '\css\praticalinfos.css';
-        include_once __DIR__ . '\css\booking.css';
-        include_once __DIR__ . '\css\giftshop.css';
+        include_once __DIR__ . '/css/header.css';
+        include_once __DIR__ . '/css/footer.css';
+        include_once __DIR__ . '/css/home.css';
+        include_once __DIR__ . '/css/event.css';
+        include_once __DIR__ . '/css/donation.css';
+        include_once __DIR__ . '/css/helpandvolunteer.css';
+        include_once __DIR__ . '/css/volunteer.css';
+        include_once __DIR__ . '/css/testimony.css';
+        include_once __DIR__ . '/css/contactus.css';
+        include_once __DIR__ . '/css/praticalinfos.css';
+        include_once __DIR__ . '/css/booking.css';
+        include_once __DIR__ . '/css/giftshop.css';
       ?>
     </style>
     <meta name="author" content="WW1 Remembrance Centre"> 

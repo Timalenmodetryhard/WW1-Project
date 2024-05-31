@@ -41,7 +41,7 @@
 </section>
 
 <?php
-    include_once __DIR__ . '\layout\event.php';
+    include_once __DIR__ . '/layout/event.php';
 ?>
 
 <section id="booking-form" class="booking-details">
