@@ -1,0 +1,49 @@
+.produits {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ccc;
+}
+
+.produit {
+    position: relative; /* Nouveau ! */
+    display: inline-block;
+    width: 23%; /* Ajuster la largeur selon vos besoins */
+    text-align: center;
+    padding: 1%;
+}
+
+.produit img {
+    width: 100%;
+    height: auto;
+}
+
+.produit h3 {
+    margin-top: 10px;
+}
+
+.produit p {
+    margin-top: 5px;
+}
+
+.produit .prix {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.produit .description {
+    display: none;
+    position: absolute; /* Nouveau ! */
+    bottom: 19%; /* Nouveau ! */
+    left: 4%; /* Nouveau ! */
+    width: 89%; /* Nouveau ! */
+    height: 72%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nouveau ! */
+    color: white; /* Nouveau ! */
+    padding: 10px; /* Nouveau ! */
+    align-items: center;
+}
+
+.produit:hover .description {
+    display: flex; /* Afficher au survol */
+}

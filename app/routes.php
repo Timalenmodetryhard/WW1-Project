@@ -10,4 +10,5 @@ const routes = array(
     '/helpandvolunteer'             => array('BaseController', 'helpandvolunteer'),
     '/volunteer'             => array('BaseController', 'volunteer'),
     '/praticalinfos'             => array('BaseController', 'praticalinfos'),
+    '/giftshop'             => array('BaseController', 'giftshop'),
 );

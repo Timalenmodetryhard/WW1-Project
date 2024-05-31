@@ -19,6 +19,7 @@
         include_once __DIR__ . '\css\contactus.css';
         include_once __DIR__ . '\css\praticalinfos.css';
         include_once __DIR__ . '\css\booking.css';
+        include_once __DIR__ . '\css\giftshop.css';
       ?>
     </style>
 </head>
@@ -75,7 +76,7 @@
           <ul class="submenu">
             <li><a href="/helpandvolunteer">Opportunities</a></li>
             <li><a href="/volunteer">Volunteer</a></li>
-            <li><a href="#">Our Gift Shop</a></li>
+            <li><a href="/giftshop">Our Gift Shop</a></li>
           </ul>
         </li>
       </ul>      

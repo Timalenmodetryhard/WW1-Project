@@ -38,6 +38,10 @@ class BaseController extends Controller
     {
         $this->loadView('praticalinfos.php');
     }
+    public function giftshop()
+    {
+        $this->loadView('giftshop.php');
+    }
     public function deconnecter()
     {
         $this->loadView('deconnexion.php');
