@@ -53,7 +53,7 @@
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="/index.php">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="menu-option">
           <a>Visit</a>
           <ul class="submenu">
