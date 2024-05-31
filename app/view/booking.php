@@ -26,7 +26,7 @@
                 <p class="time">Close</p>
             </div>
             <div class="sat-day">
-                <p class="day">Saterday</p>
+                <p class="day">Saturday</p>
                 <p class="time">Close</p>
             </div>
             <div class="sun-day">
@@ -44,15 +44,15 @@
     include_once __DIR__ . '\layout\event.php';
 ?>
 
-<section class="booking-details">
+<section id="booking-form" class="booking-details">
     <h2 class="booking-title">Booking</h2>
-    <form method="post" id="booking-form">
+    <form method="post">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div>
-            <label for="lastname">Lastname:</label>
+            <label for="lastname">Last name:</label>
             <input type="text" id="lastname" name="lastname" required>
         </div>
         <div>

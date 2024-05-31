@@ -1,16 +1,18 @@
 .produits {
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: #ccc;
+    padding: 5%;
 }
 
 .produit {
     position: relative; /* Nouveau ! */
-    display: inline-block;
-    width: 23%; /* Ajuster la largeur selon vos besoins */
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Ajuster la largeur selon vos besoins */
     text-align: center;
-    padding: 1%;
+    margin: 1%;
 }
 
 .produit img {
@@ -19,11 +21,11 @@
 }
 
 .produit h3 {
-    margin-top: 10px;
+    margin-top: 0.3rem;
 }
 
 .produit p {
-    margin-top: 5px;
+    margin-top: 0.15rem;
 }
 
 .produit .prix {
@@ -34,13 +36,12 @@
 .produit .description {
     display: none;
     position: absolute; /* Nouveau ! */
-    bottom: 19%; /* Nouveau ! */
-    left: 4%; /* Nouveau ! */
-    width: 89%; /* Nouveau ! */
-    height: 72%;
+    width: 100%; /* Nouveau ! */
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Nouveau ! */
     color: white; /* Nouveau ! */
-    padding: 10px; /* Nouveau ! */
+    padding:1rem; /* Nouveau ! */
+    font-size: 1rem;
     align-items: center;
 }
 

@@ -1,6 +1,6 @@
 <section class="volunteer-details">
     <h2 class="volunteer-title">Volunteer</h2>
-    <form method="post ">
+    <form id="volunteer-form" method="post ">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>

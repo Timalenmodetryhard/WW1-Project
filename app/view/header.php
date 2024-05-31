@@ -69,7 +69,7 @@
           <a>Visit</a>
           <ul class="submenu">
 
-            <li><a href="/booking">Booking Planning</a></li>
+            <li><a href="/booking#booking-form">Booking Planning</a></li>
           </ul>
         </li>
         <li class="menu-option">
@@ -85,7 +85,7 @@
           <a>Help & Volunteer</a>
           <ul class="submenu">
             <li><a href="/helpandvolunteer">Opportunities</a></li>
-            <li><a href="/volunteer">Volunteer</a></li>
+            <li><a href="/volunteer#volunteer-form">Volunteer</a></li>
             <li><a href="/giftshop">Our Gift Shop</a></li>
           </ul>
         </li>
