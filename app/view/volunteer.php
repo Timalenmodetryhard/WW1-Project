@@ -6,7 +6,7 @@
             <input type="text" id="name" name="name" required>
         </div>
         <div>
-            <label for="lastname">Lastname:</label>
+            <label for="lastname">Last name:</label>
             <input type="text" id="lastname" name="lastname" required>
         </div>
         <div>
@@ -27,7 +27,7 @@
             <input type="text" id="address" name="address" required>
         </div>
         <div>
-            <label for="date">Birth date:</label>
+            <label for="date">Date of birth:</label>
             <input type="date" id="date" name="date" required min="<?php echo date("Y-M-D")?>">
         </div>
         <div>
@@ -98,40 +98,6 @@
             echo "Mailer Error:please retry or contact the support.";
         }
     }
-    /*
-    $responses = [];
-    // Check if the form was submitted
-    if (isset($_POST['email'], $_POST['name'], $_POST['more-information'])) {
-        // Validate email adress
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $responses[] = 'Email is not valid!';
-        }
-        // Make sure the form fields are not empty
-        if (empty($_POST['email']) || empty($_POST['name']) || empty($_POST['more-information'])) {
-            $responses[] = 'Please complete all fields!';
-        } 
-        // If there are no errors
-        if (!$responses) {
-            // Where to send the mail? It should be your email address
-            $to      = 'leeliandu972@gmail.com';
-            // Send mail from which email address?
-            $from = 'leeliandu973@gmail.com';
-            // Mail subject
-            $subject = "Volunteer";
-            // Mail message
-            $message = $_POST['more-information'];
-            // Mail headers
-            $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-            // Try to send the mail
-            if (mail($to, $subject, $message, $headers)) {
-                // Success
-                $responses[] = 'Message sent!';		
-            } else {
-                // Fail
-                $responses[] = 'Message could not be sent! Please check your mail server settings!';
-            }
-        }
-    */
     ?>
     </div>
 </section>

@@ -1,6 +1,6 @@
 <section class="help-information">
     <h1 class="title-page">Help & Volunteer</h1>
-    <img src='../img/carousel/image.png' alt="soldier in trenches">
+    <img src='assets/img/carousel/image.png' alt="soldier in trenches">
     <div class="differente-roles">
         <h3>Help Wanted</h3>
         <p>

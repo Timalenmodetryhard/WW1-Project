@@ -2,7 +2,7 @@
     <h2 class="title-page">Events</h2>
     <div class="event1 event event-right">
         <article class="event-img">
-            <img src="img/event/emorialFront.png" alt="memorial WW1">
+            <img src="assets/img/event/emorialFront.png" alt="memorial WW1">
         </article>
         <article class="event-text">
             <p>
@@ -18,6 +18,7 @@
     </div>
     <div class="event2 event event-left">
         <article class="event-text">
+            <h2>Retired soldier visit</h2>
             <p>
             Opening the doors of the WW1 Memorial for a special costume event was a vibrant celebration
              of history and camaraderie. Guests arrived in meticulously crafted WW1-era soldier uniforms,
@@ -28,12 +29,12 @@
             </p>
         </article>
         <article class="event-img">
-            <img src="img/event/Soldier.png" alt="WW1 soldier in trensh">
+            <img src="assets/img/event/Soldier.png" alt="WW1 soldier in trensh">
         </article>
     </div>
     <div class="event3 event event-right">
         <article class="event-img">
-            <img src="img/event/merryChristmast.png "alt="merry christmast">
+            <img src="assets/img/event/merryChristmast.png "alt="merry christmast">
         </article>
         <article class="event-text">
         <p>

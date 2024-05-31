@@ -14,24 +14,22 @@
         <div class="follow-us">
           <h2>Follow Us</h2>
           <ul class="reseaux-sociaux">
-              <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><i class="fab fa-facebook-f"></i><img src="img/logo/facebook.png" alt="facebook"></a></li>
-              <li><a href="https://twitter.com/WW1Centre"><i class="fab fa-twitter"></i><img src="img/logo/x.png" alt="twitter"></a></li>
-              <li><a href="https://www.youtube.com/@WW1remcen"><i class="fab fa-youtube"></i><img src="img/logo/ytb.png" alt="youtube"></a></li>
+              <li><a href="https://www.facebook.com/Ww1RemembranceCentre"><i class="fab fa-facebook-f"></i><img src="assets/img/logo/facebook.png" alt="facebook"></a></li>
+              <li><a href="https://twitter.com/WW1Centre"><i class="fab fa-twitter"></i><img src="assets/img/logo/x.png" alt="twitter"></a></li>
+              <li><a href="https://www.youtube.com/@WW1remcen"><i class="fab fa-youtube"></i><img src="assets/img/logo/ytb.png" alt="youtube"></a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="copy">
       <div class="logo">
-        <img src="img/logo/favicon.png" class="logo img" alt="logo" style="width:100px;height:100px;">
+        <img src="assets/img/logo/favicon.png" class="logo img" alt="logo" style="width:100px;height:100px;">
       </div>
       <div class="copytext">
         <p>&copy; 2024 WW1 remembrance Center</p>
         <p>This Web site use AI for images</p>
       </div>
     </div>
-
-
   </footer>
 </body>
 </html>

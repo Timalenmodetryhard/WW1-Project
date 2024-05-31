@@ -1,22 +1,22 @@
 <div class="carousel">
     <video id="video1" class="carousel-video" muted>
-        <source src="img/carousel/slideshow1.mp4" type="video/mp4">
+        <source src="assets/img/carousel/slideshow1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <video id="video2" class="carousel-video" muted>
-        <source src="img/carousel/slideshow2.mp4" type="video/mp4">
+        <source src="assets/img/carousel/slideshow2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <video id="video3" class="carousel-video" muted>
-        <source src="img/carousel/slideshow3.mp4" type="video/mp4">
+        <source src="assets/img/carousel/slideshow3.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <video id="video4" class="carousel-video" muted>
-        <source src="img/carousel/slideshow4.mp4" type="video/mp4">
+        <source src="assets/img/carousel/slideshow4.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
-<script src="script/carousel.js"></script>
+<script src="assets/script/carousel.js"></script>
 <section class="presentation">
     <h1 class="title-page">Welcome to WW1 Remembrance Centre</h1>
 
@@ -36,13 +36,13 @@
             <p>In the United Kingdom, the poppy is closely linked to the First World War, symbolizing the memory of the sacrifices made by British and Commonwealth soldiers. This profound connection originates from the devastated battlefields of the war, where delicate blue flowers began to bloom amidst the ravages of violence. Inspired by these fragile blooms, poets like John McCrae invoked their symbolism in famous works such as "In Flanders Fields," thereby strengthening the association of the poppy with remembrance and commemoration. Since then, the poppy has become a symbol of respect and gratitude towards those who served and fell during the war. Each year, on Remembrance Day, the poppy is proudly worn by millions of people across the United Kingdom, recalling the sacrifices and heroism of First World War soldiers, thus perpetuating their memory for future generations.</p>
         </article>
         <article class="article-img">
-            <img src="img/flower/bleuet.png" alt="Flowers">
+            <img src="assets/img/flower/bleuet.png" alt="Flowers">
         </article>
     </div>
    
     <div class="poppy">
         <div class="article-img">
-            <img src="img/flower/poppy.png" alt="Poppy" id="pop">
+            <img src="assets/img/flower/poppy.png" alt="Poppy" id="pop">
         </div>
         <article class="article-text">
             <h2>Poppy</h2>

@@ -2,7 +2,7 @@
     <h1 class="title-page">Testimony</h1>
     <div class="testimony">
         <article class="testimony-img">
-            <img src="/img/testimony/testimony1.png" alt="photo">
+            <img src="/assets/img/testimony/testimony1.png" alt="photo">
         </article>
         <article class="testimony-text"> 
             <h2>Name</h2>
@@ -16,13 +16,13 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, harum? Iusto quisquam amet ipsa numquam quaerat fugit vitae quos eius debitis totam. Enim reiciendis corporis veniam, atque error accusantium Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quidem fuga cupiditate rerum iure dolor, id earum mollitia aspernatur quae aut nesciunt inventore vel quos totam voluptates, commodi soluta modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti iure vitae temporibus aspernatur distinctio nostrum ex aut, ducimus optio assumenda eligendi quo voluptate dolorem error iste magnam reprehenderit deserunt!</p>
         </article>
         <article class="testimony-img">
-            <img src="/img/testimony/testimony2.png" alt="photo">
+            <img src="/assets/img/testimony/testimony2.png" alt="photo">
         </article>
     </div>
     
     <div class="testimony">
         <article class="testimony-img">
-            <img src="/img/testimony/testimony3.png" alt="photo">
+            <img src="/assets/img/testimony/testimony3.png" alt="photo">
         </article>
         <article class="testimony-text">
             <h2>Name</h2>
