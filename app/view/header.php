@@ -59,27 +59,27 @@
       <div class="header-title">
         <h1>WWI REMEMBRANCE CENTRE</h1>
       </div>
-      <a id="schedule-tour-popup-button" href="/booking#booking-form">Book your visit</a> 
-      <img src="/assetsimg/responsive/burgeur_icone.png" alt="responsiv logo">
+      <a id="schedule-tour-popup-button" href="/app/view/booking.php#booking-form">Book your visit</a> 
+      <img src="/assets/img/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="/">Home</a></li>
+        <li><a href="/index.php">Home</a></li>
         <li class="menu-option">
           <a>Visit</a>
           <ul class="submenu">
 
-            <li><a href="/booking#booking-form">Booking Planning</a></li>
+            <li><a href="/app/view/booking.php#booking-form">Booking Planning</a></li>
           </ul>
         </li>
         <li class="menu-option">
           <a>Practical Information</a>
           <ul class="submenu">
-            <li><a href="/praticalinfos">Contact</a></li>
+            <li><a href="/app/view/praticalinfos.php">Contact</a></li>
           </ul>
         </li>
         <li>
-          <a href="/testimony">Testimony</a>
+          <a href="/app/view/">Testimony</a>
         </li>
         <li class="menu-option">
           <a>Help & Volunteer</a>

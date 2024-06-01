@@ -63,25 +63,25 @@
             background-color: #095933;
             color: white;
             padding: 1rem;
-            border-radius: 8px;
             text-align: center;
-            margin-bottom: 1rem;
+            
         }
 
         .content-details {
             padding: 1rem;
             border: 2px solid black;
             border-top: none;
-            gap: 1rem;
-            background-color: #fff;
             color: #000;
-            border-radius: 8px;
+            text-align: left; 
         }
-
+        
         .content-details > div {
-            border: 1px solid black;
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 0.2em;
+        }
+        
+        .Visiter-name {
+            font-size: 1em; 
+            margin-bottom: 0.75em;
         }
 
         .footer {
@@ -126,7 +126,7 @@
                     <h2>Confirmed time :<br>%date% at %time%</h2>
                 </div>
                 <div class="content-details">
-                    <div><strong>Name : %lastname% %name%<br></strong></div>
+                    <div class="Visiter-name"><strong>Name : %lastname% %name%<br></strong></div>
                     <div><strong>Email : %email%<br></strong></div>
                     <div><strong>Phone number : %phone%<br></strong></div>
                     <div><strong>Address : %address%<br></strong></div>
