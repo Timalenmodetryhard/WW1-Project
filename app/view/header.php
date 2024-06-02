@@ -64,22 +64,22 @@
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="/">Home</a></li>
+        <li><a href="/index.php">Home</a></li>
         <li class="menu-option">
           <a>Visit</a>
           <ul class="submenu">
 
-            <li><a href="/booking#booking-form">Booking Planning</a></li>
+            <li><a href="/app/view/booking.php#booking-form">Booking Planning</a></li>
           </ul>
         </li>
         <li class="menu-option">
           <a>Practical Information</a>
           <ul class="submenu">
-            <li><a href="/praticalinfos">Contact</a></li>
+            <li><a href="/app/view/praticalinfos.php">Contact</a></li>
           </ul>
         </li>
         <li>
-          <a href="/testimony">Testimony</a>
+          <a href="/app/view/">Testimony</a>
         </li>
         <li class="menu-option">
           <a>Help & Volunteer</a>
