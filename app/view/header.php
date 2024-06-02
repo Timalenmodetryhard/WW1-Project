@@ -60,7 +60,7 @@
         <h1>WWI REMEMBRANCE CENTRE</h1>
       </div>
       <a id="schedule-tour-popup-button" href="/booking#booking-form">Book your visit</a> 
-      <img src="/assetsimg/responsive/burgeur_icone.png" alt="responsiv logo">
+      <img src="assets/img/responsive/burgeur_icone.png" alt="responsiv logo">
     </div>
     <nav class="botom-header"> 
       <ul class="menu">

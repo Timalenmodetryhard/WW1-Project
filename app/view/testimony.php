@@ -5,7 +5,7 @@
             <img src="/assets/img/testimony/testimony1.png" alt="photo">
         </article>
         <article class="testimony-text"> 
-            <h2>Pation for WW1</h2>
+            <h2>Passion for WW1</h2>
             <p> I discovered World War I through my mom, who taught me the story of my family and how they fought for England. At that time, we didn't learn this story at school. The more I listened to my mother's stories, the more I fell in love with that historical period. Since that day, I made up my mind to preserve and honor our historical heritage.</p>
         </article>
     </div>

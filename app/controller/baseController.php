@@ -9,15 +9,6 @@ class BaseController extends Controller
     {
 
     }
-
-    public function home()
-    {
-        $this->loadView('home.php');
-    }
-    public function booking()
-    {
-        $this->loadView('booking.php');
-    }
     public function information()
     {
         $this->loadView('information.php');

@@ -3,12 +3,12 @@
  *  define routes with its controllers and actions 
  */
 const routes = array(
-    '/'             => array('BaseController', 'home'),
-    '/information'             => array('BaseController', 'information'),
-    '/testimony'             => array('BaseController', 'testimony'),
-    '/booking'             => array('BaseController', 'booking'),
-    '/helpandvolunteer'             => array('BaseController', 'helpandvolunteer'),
-    '/volunteer'             => array('BaseController', 'volunteer'),
-    '/praticalinfos'             => array('BaseController', 'praticalinfos'),
-    '/giftshop'             => array('BaseController', 'giftshop'),
+    '/'             => array('eventController', 'home'),
+    '/information'             => array('baseController', 'information'),
+    '/testimony'             => array('baseController', 'testimony'),
+    '/booking'             => array('eventController', 'booking'),
+    '/helpandvolunteer'             => array('baseController', 'helpandvolunteer'),
+    '/volunteer'             => array('baseController', 'volunteer'),
+    '/praticalinfos'             => array('baseController', 'praticalinfos'),
+    '/giftshop'             => array('baseController', 'giftshop'),
 );
