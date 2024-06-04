@@ -160,6 +160,29 @@
     background-color:#2C2A2D;
 }
 
+.carousel > div:not(.carousel-background) {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+}
+
+.carousel-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000c0;
+    z-index: 1;
+}
+
+.carousel>div>h1 {
+    font-size: 2.3vw;
+}
+
 .carousel-video {
     display: none;
     width: 100%;
@@ -180,6 +203,10 @@
     .museum-presentation, .poppy {
         flex-direction: column; /* Une seule colonne */
         gap: 1.5rem; /* équivalent à 24px */
+    }
+
+    .museum-presentation h2{
+        padding: 0 5%;
     }
 
     .corn-flowers {

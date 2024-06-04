@@ -15,6 +15,10 @@
         <source src="assets/img/carousel/slideshow4.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <div>
+        <h1>We go the extra mile.... ....because they did!</h1>
+    </div>
+    <div class="carousel-background"></div>
 </div>
 <script src="assets/script/carousel.js"></script>
 <section class="presentation">

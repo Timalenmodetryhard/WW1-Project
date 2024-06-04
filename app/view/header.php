@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php 
-    $fileName= basename($_SERVER['SERVER_NAME'], ".php"); // get the file name
-    $pageName = ucfirst($fileName) . ' - WW1 Remembrance Centre'; // set the page name
+    $fileName= basename($_SERVER['SERVER_NAME'], ".php");
+    $pageName = ucfirst($fileName) . ' - WW1 Remembrance Centre';
     ?>
     <title><?= isset($title) ? $title : $pageTitle; ?></title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
@@ -64,22 +64,22 @@
     </div>
     <nav class="botom-header"> 
       <ul class="menu">
-        <li><a href="/index.php">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="menu-option">
           <a>Visit</a>
           <ul class="submenu">
 
-            <li><a href="/app/view/booking.php#booking-form">Booking Planning</a></li>
+            <li><a href="/booking#booking-form">Booking Planning</a></li>
           </ul>
         </li>
         <li class="menu-option">
           <a>Practical Information</a>
           <ul class="submenu">
-            <li><a href="/app/view/praticalinfos.php">Contact</a></li>
+            <li><a href="/praticalinfos">Contact</a></li>
           </ul>
         </li>
         <li>
-          <a href="/app/view/">Testimony</a>
+          <a href="/testimony">Testimony</a>
         </li>
         <li class="menu-option">
           <a>Help & Volunteer</a>
