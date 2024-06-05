@@ -1,6 +1,7 @@
 <?php
 
-define('DB_HOST', '127.0.0.1:3306');
-define('DB_NAME', 'challengeweb');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'ww1remembrancecentre');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'Leevee*97232');
+define('DB_PASSWORD', '');
+define('DB_PORT', '3306');

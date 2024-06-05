@@ -1,4 +1,5 @@
 <?php
+namespace Core;
 
 require BASE_PATH . '/app/configs.php';
 
@@ -14,13 +15,13 @@ class Model
     protected function connectDB()
     {
         try {
-            $pdo = new PDO(
+            $pdo = new \PDO(
                 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME,
                 DB_USER,
                 DB_PASSWORD
             );
             return $pdo;
-        } catch (PDOException $exception) {
+        } catch (\PDOException $exception) {
             echo $exception->getMessage();
         }
     }

@@ -4,80 +4,83 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
 </div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this event?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a href="#"><button type="button" class="btn btn-danger" id="confirmDelete">Delete</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Content Row -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <a href="/event_add"><button class="btn btn-success">New event</button></a>
+</div>
 <div class="row">
+<?php 
+$i=0;
+$event = false;
+function truncateString($string, $limit, $break=" ", $pad="...")
+{
+    // return with no change if string is shorter than $limit
+    if (strlen($string) <= $limit) return $string;
 
-<!-- Event Card Example -->
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card shadow h-100">
-<img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
-<div class="card-body">
-<h5 class="card-title">Event Title 1</h5>
-<p class="card-text">This is a brief description of the event. It provides an overview of what the event is about.</p>
-<div class="d-flex justify-content-between align-items-center">
-<a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-<a href="/WW1-Project-Admin-Panel/edit.html" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
-<a href="#" class="note-icon"><i class="fas fa-sticky-note"></i></a>
-</div>
-</div>
-</div>
-</div>
+    $string = substr($string, 0, $limit);
 
-<!-- Event Card Example -->
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card shadow h-100">
-<img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
-<div class="card-body">
-<h5 class="card-title">Event Title 2</h5>
-<p class="card-text">This is a brief description of the event. It provides an overview of what the event is about.</p>
-<div class="d-flex justify-content-between align-items-center">
-<a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-<a href="#" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
-<a href="#" class="note-icon"><i class="fas fa-sticky-note"></i></a>
-</div>
-</div>
-</div>
-</div>
+    if (false !== ($breakpoint = strrpos($string, $break))) {
+        $string = substr($string, 0, $breakpoint);
+    }
 
-<!-- Event Card Example -->
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card shadow h-100">
-<img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
-<div class="card-body">
-<h5 class="card-title">Event Title 3</h5>
-<p class="card-text">This is a brief description of the event. It provides an overview of what the event is about.</p>
-<div class="d-flex justify-content-between align-items-center">
-<a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-<a href="#" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
-<a href="#" class="note-icon"><i class="fas fa-sticky-note"></i></a>
+    return $string . $pad;
+}
+?>
+<?php if (!empty($data['data']['events'])): ?>
+    <?php foreach ($data['data']['events'] as $row): ?>
+        <?php $i += 1 ?>
+        <div class="col-xl-3 col-md-6 mb-4 event-item" data-id="<?php echo $row['id']; ?>" <?php if ($i>4) echo 'style="display: none;"'; ?>>
+            <div class="card shadow h-100">
+                <div class="card-img-div">
+                    <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="Event Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                    <p class="card-text"><?php echo truncateString($row['description'], 87);?></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                        <a href="/event_edit?id=<?php echo $row["id"] ?>" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach ?>
+<?php else: ?>
+    <div class="event-nothing">
+        <h1>Events you add will be shown here</h1>
+    </div>
+<?php endif ?>
 </div>
-</div>
-</div>
-</div>
-
-<!-- Event Card Example -->
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card shadow h-100">
-<img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
-<div class="card-body">
-<h5 class="card-title">Event Title 4</h5>
-<p class="card-text">This is a brief description of the event. It provides an overview of what the event is about.</p>
-<div class="d-flex justify-content-between align-items-center">
-<a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
-<a href="#" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
-<a href="#" class="note-icon"><i class="fas fa-sticky-note"></i></a>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-
+<?php if($i > 4): ?>
+    <div class="col-xl-3 col-md-6 mb-4">
+        <button id="toggle-events" class="btn btn-primary">Show more</button>
+    </div>
+    <?php endif ?>
+<script src ="js/script.js"></script>
 <!-- Content Row -->
 
 <div class="row">
@@ -94,9 +97,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Weekly Schedule</h6> 
                 
                 <div>
-                    <a href="#" class="note-icon"><i class="fas fa-sticky-note"></i></a> 
-                    <a href="#" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
-                    <a href="#" class="delete-icon"><i class="fas fa-trash-alt"></i></a>
+                    <a href="/schedule_edit" class="edit-icon"><i class="fas fa-pencil-alt"></i></a>
                 </div>
             </div>
             <!-- Card Body -->
@@ -111,192 +112,52 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr data-toggle="modal" data-target="#mondayModal">
-                                <td>Monday</td>
-                                <td>Closed</td>
-                                <td>-</td>
-                            </tr>
-                            <tr data-toggle="modal" data-target="#tuesdayModal">
-                                <td>Tuesday</td>
-                                <td>Open</td>
-                                <td>11am - 2pm</td>
-                            </tr>
-                            <tr data-toggle="modal" data-target="#wednesdayModal">
-                                <td>Wednesday</td>
-                                <td>Open</td>
-                                <td>11am - 2pm</td>
-                            </tr>
-                            <tr data-toggle="modal" data-target="#thursdayModal">
-                                <td>Thursday</td>
-                                <td>Open</td>
-                                <td>11am - 2pm</td>
-                            </tr>
-                            <tr data-toggle="modal" data-target="#fridayModal">
-                                <td>Friday</td>
-                                <td>Closed</td>
-                                <td>-</td>
-                            </tr>
-                            <tr data-toggle="modal" data-target="#saturdayModal">
-                                <td>Saturday</td>
-                                <td>Closed</td>
-                                <td>-</td>
-                            </tr>
-                            <tr data-toggle="modal" data-target="#sundayModal">
-                                <td>Sunday</td>
-                                <td>Open</td>
-                                <td>11am - 2pm</td>
-                            </tr>
+                            <?php if (!empty($data['data']['schedule'])): ?>
+                                <?php foreach ($data['data']['schedule'] as $row): ?>
+                                    <tr data-toggle="modal" data-target="#mondayModal">
+                                        <td><?php echo $row["day"] ?></td>
+                                        <td><?php echo $row["status"] ?></td>
+                                        <?php if($row["hours"]): ?>
+                                            <td><?php echo $row["hours"] ?></td>
+                                        <?php else: ?>
+                                            <td>-</td>
+                                        <?php endif ?>
+                                    </tr>
+                                <?php endforeach ?>
+                            <?php endif ?>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    
-        <!-- Modal for Monday -->
-        <div class="modal fade" id="mondayModal" tabindex="-1" role="dialog" aria-labelledby="mondayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="mondayModalLabel">Monday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Monday is closed.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Modal for Tuesday -->
-        <div class="modal fade" id="tuesdayModal" tabindex="-1" role="dialog" aria-labelledby="tuesdayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="tuesdayModalLabel">Tuesday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Tuesday is open from 11am to 2pm.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <?php if (!empty($data['data']['schedule'])): ?>
+        <?php foreach ($data['data']['schedule'] as $row): ?>
+            <div class="modal fade" id="<?php echo strtolower($row["day"]); ?>Modal" tabindex="-1" role="dialog" aria-labelledby="<?php echo strtolower($row["day"]); ?>ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="<?php echo strtolower($row["day"]); ?>ModalLabel"><?php echo $row["day"]; ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <?php if($row["status"] === "Open"): ?>
+                                <p><?php echo $row["day"]; ?> is open from <?php echo $row["hours"]; ?>.</p>
+                            <?php elseif($row["status"] === "Closed"): ?>
+                                <p><?php echo $row["day"]; ?> is closed.</p>
+                            <?php endif ?>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    
-        <!-- Modal for Wednesday -->
-        <div class="modal fade" id="wednesdayModal" tabindex="-1" role="dialog" aria-labelledby="wednesdayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="wednesdayModalLabel">Wednesday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Wednesday is open from 11am to 2pm.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Modal for Thursday -->
-        <div class="modal fade" id="thursdayModal" tabindex="-1" role="dialog" aria-labelledby="thursdayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="thursdayModalLabel">Thursday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Thursday is open from 11am to 2pm.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Modal for Friday -->
-        <div class="modal fade" id="fridayModal" tabindex="-1" role="dialog" aria-labelledby="fridayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="fridayModalLabel">Friday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Friday is closed.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Modal for Saturday -->
-        <div class="modal fade" id="saturdayModal" tabindex="-1" role="dialog" aria-labelledby="saturdayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="saturdayModalLabel">Saturday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Saturday is closed.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Modal for Sunday -->
-        <div class="modal fade" id="sundayModal" tabindex="-1" role="dialog" aria-labelledby="sundayModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="sundayModalLabel">Sunday</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Sunday is open from 11am to 2pm.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    
-
-
-
+        <?php endforeach ?>
+    <?php else: ?>
+        <h2>Error with the connection with the database</h2>
+    <?php endif ?>
 
         <div class="col-xl-4 col-lg-5">
             <div class="card shadow mb-4">
@@ -306,36 +167,34 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <div class="row">
-                        <!-- Image 1 -->
-                        <div class="col-lg-6 mb-4">
-                            <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Product Image 1">
-                            <p class="text-center mt-2">Product 1</p>
-                        </div>
-                        <!-- Image 2 -->
-                        <div class="col-lg-6 mb-4">
-                            <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Product Image 2">
-                            <p class="text-center mt-2">Product 2</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Image 3 -->
-                        <div class="col-lg-6 mb-4">
-                            <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Product Image 3">
-                            <p class="text-center mt-2">Product 3</p>
-                        </div>
-                        <!-- Image 4 -->
-                        <div class="col-lg-6 mb-4">
-                            <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Product Image 4">
-                            <p class="text-center mt-2">Product 4</p>
-                        </div>
-                    </div>
-                    <!-- Show Now Button -->
+                <?php 
+                $i=0;
+                ?>
+                <?php if (!empty($data['data']['items'])): ?>
+                    <?php foreach ($data['data']['items'] as $row): ?>
+                        <?php if ($i<4):?>
+                            <?php if($i%2===0): ?>
+                                <div class="row">
+                            <?php endif ?>              
+                                <div class="col-lg-6 mb-4">
+                                    <img src="<?php echo $row['image'] ?>" class="img-fluid rounded" alt="<?php echo $row['name'] ?>">
+                                    <p class="text-center mt-2"><?php echo $row['name'] ?></p>
+                                </div>
+                            <?php if($i%2===0): ?>
+                                </div>
+                            <?php endif ?>
+                            <?php $i+=1; ?>
+                        <?php endif ?>
+                    <?php endforeach ?>
+
                     <div class="row">
                         <div class="col-lg-12">
-                            <a href="/giftshop" class="btn btn-primary btn-block">Show now</a>
+                            <a href="/giftshop" class="btn btn-primary btn-block">Show more</a>
                         </div>
                     </div>
+                <?php else: ?>
+                    <h2>Items you add will be shown here</h2>
+                <?php endif ?>
                 </div>
             </div>
        </div>                                                      
