@@ -18,6 +18,10 @@ class Router
             $controllerClass = 'App\\Controllers\\' . $controller; // Utilisez l'espace de noms correct
 
             if (file_exists(BASE_PATH . '/app/controller/' . $controller . '.php')) {
+                if ($controller !== "LoginController"){
+                    require BASE_PATH . '/app/view/header.php';
+                }
+
                 require_once BASE_PATH . '/app/controller/' . $controller . '.php';
                 if (class_exists($controllerClass)) {
                     $class = new $controllerClass();

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Forgot Password</title>
+    <title>WW1 RC - Forgot Password</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -18,23 +18,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
 
 </head>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reset Password</title>
-    <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-</head>
-
 <body class="bg-gradient-primary">
 
     <div class="container">
@@ -52,11 +38,14 @@
                                         <h1 class="h4 text-gray-900 mb-2">Forgot Your Password?</h1>
                                         <p class="mb-4">We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!</p>
                                     </div>
-                                    <form class="user" method="POST" action="forgot-password.php">
+                                    <form class="user" method="POST">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." required>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Reset Password</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" name="forget">Reset Password</button>
+                                        <a href="/login" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </a>
                                     </form>
                                 </div>
                             </div>

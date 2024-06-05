@@ -12,4 +12,6 @@ const routes = array(
     'event_edit'             => array('EventController', 'edit_event'),
     'event_delete'             => array('EventController', 'delete_event'),
     'schedule_edit'             => array('ScheduleController', 'edit_day'),
+    'login'             => array('LoginController', 'login'),
+    'forget_password'             => array('LoginController', 'forget_password'),
 );
