@@ -7,6 +7,9 @@
         <div class="informations">
           <h1>Open Hours</h1>
           <div class="liens">
+          <?php /*foreach ($days as $day): ?>
+            <p><?php echo htmlspecialchars($day['day']) . ": " . htmlspecialchars($day['status']) . " - " . htmlspecialchars($day['hours']); ?></p>
+          <?php endforeach; */?>
               <p>Monday : Closed</p>
               <p>Tuesday : 11:00 a.m. – 2:00 p.m.</p>
               <p>Wednesday : 11:00 a.m. – 2:00 p.m.</p>

@@ -8,7 +8,7 @@
     $fileName= basename($_SERVER['SERVER_NAME'], ".php");
     $pageName = ucfirst($fileName) . ' - WW1 Remembrance Centre';
     ?>
-    <title><?= isset($title) ? $title : $pageTitle; ?></title>
+    <title>WW1 Remembrance Centre</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <style>
       <?php

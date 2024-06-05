@@ -3,7 +3,7 @@
 require BASE_PATH . '/core/controller.php';
 require BASE_PATH . '/app/models/giftshopModel.php';
 
-class GiftShopController extends Controller
+class GiftshopController extends Controller
 {      
     private $model;
     private $id;

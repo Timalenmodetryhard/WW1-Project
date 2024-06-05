@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Encoding = 'base64';
                 $mail->send();
                 echo "Mail has been sent successfully!";
-                sleep(5);
+                ob_end_flush();
                 header("Location: /volunteer");
                 exit();
             } catch (Exception $e) {

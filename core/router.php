@@ -15,8 +15,9 @@ class Router
                 $class = new $controller();
                 if (method_exists($controller, $method)) {
                     $class->$method();
-                    
+
                     include_once BASE_PATH . '/app/view/footer.php';
+                    
                     exit;
                 }
             }

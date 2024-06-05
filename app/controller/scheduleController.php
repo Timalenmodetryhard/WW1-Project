@@ -14,11 +14,8 @@ class ScheduleController extends Controller
         $this->id = null;
     }
 
-    public function giftshop()
+    public function schedule()
     {
-        $response = array('success' => false);
-
-        $items = $this->model->getAll();
-        $this->loadView('giftshop.php', ['data'=>$items]);
+        return $this->model->getAll();
     }
 }
