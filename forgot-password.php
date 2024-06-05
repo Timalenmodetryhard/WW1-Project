@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Connexion à la base de données
+    // Connexion to the data base
     $servername = "localhost";
     $db_username = "username";
     $db_password = "password";
@@ -8,16 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
-    // Vérifier la connexion
+    // Verification of the connection
     if ($conn->connect_error) {
         header("Location: error.html");
         exit();
     }
 
-    // Adresse e-mail à vérifier
+    // verification of email
     $email = $conn->real_escape_string($_POST['email']);
 
-    // Vérifier si l'adresse e-mail est dans la base de données
+    // Verification if the email is in the database
     $sql = "SELECT username FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
@@ -25,18 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        // L'adresse e-mail est trouvée, générer un nouveau mot de passe sécurisé
+        // generate a new password
         $new_password = bin2hex(random_bytes(10));
         $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
 
-        // Envoyer le nouveau mot de passe par e-mail
+        // send the new password by email
         $to = $email;
-        $subject = "Mot de passe sécurisé généré automatiquement";
-        $message = "Votre nouveau mot de passe est : " . $new_password;
+        $subject = "new password request";
+        $message = "You password hase been update. Now it is : " . $new_password;
         $headers = "From: your-email@example.com";
 
         if (mail($to, $subject, $message, $headers)) {
-            // Mettre à jour le mot de passe de l'utilisateur dans la base de données
+            // update the password in the database
             $stmt->bind_result($username);
             $stmt->fetch();
             $update_sql = "UPDATE users SET password = ? WHERE username = ?";
@@ -45,27 +45,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($update_stmt->execute()) {
                 echo "Mot de passe mis à jour avec succès dans la base de données";
-                // Rediriger vers une page de succès
-                header("Location: success.html");
+                // reduction to the success page
+                header("Location: index.html")
+                echo "Paswword updated";
                 exit();
             } else {
                 echo "Erreur lors de la mise à jour du mot de passe : " . $conn->error;
-                // Rediriger vers une page d'erreur
-                header("Location: error.html");
+                // redirection to the error page
+                header("Location: index.html");
+                echo("it simce to be an error ... please verify the information enter and retry.")
                 exit();
             }
 
             $update_stmt->close();
         } else {
             echo "Erreur lors de l'envoi de l'e-mail";
-            // Rediriger vers une page d'erreur
-            header("Location: error.html");
+            // redirection to the error page
+            header("Location: index.html");
+            echo("it simce to be an error ... please verify the information enter and retry.")
             exit();
         }
     } else {
         echo "Adresse e-mail non trouvée dans la base de données";
-        // Rediriger vers une page d'erreur
-        header("Location: error.html");
+        // redirection to the error page
+        header("Location: index.html");
+        echo("it simce to be an error ... please verify the information enter and retry.")
         exit();
     }
 
